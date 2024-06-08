@@ -1,0 +1,78 @@
+#! /bin/env bash
+
+if [ -z "$1" ]
+  then
+    echo "No argument supplied"
+    echo "syntax: > end_of_night YYYY-MM-DD firstImage"
+    echo "exiting" 
+exit 1
+fi
+
+# Stop vnc session
+
+cd /home2/declsp 
+echo "stoping vnc"
+bin/stopvnc
+
+# Remove any nopass* files in the obsbot directory
+cd /home2/declsp/obsbot
+echo "deleting nopass files"
+\rm nopass1
+\rm nopass2
+\rm nopass3
+\rm forcepass1
+\rm forcepass2
+\rm forcepass3
+
+# Pick up a newer SVN executable
+export SVN=/home2/declsp/mambaforge/bin/svn
+
+# do the almanac files
+
+echo "doing almanac, psfmovie, and coverage"
+
+cd ~/observing/logs
+echo "Doing almanac file and plot"
+\rm ./idlbatch
+echo almanac,$2 >> idlbatch
+echo "plotalmanac,'Almanac_$1.fits',ps='plot_Almanac_$1'" >> idlbatch
+#echo psfmovie >> idlbatch
+echo coverage_plot >> idlbatch
+echo exit >> idlbatch
+idl idlbatch
+# Comment out the SVN lines ######
+# $SVN add *Almanac_$1.*
+# $SVN -m "" commit *Almanac_$1.*
+#mv PSF_contours.ps "PSF_$1"'.ps'
+#gzip "PSF_$1"'.ps'
+
+# do copilot nightly plot
+
+echo "Doing summary plot"
+cd /home2/declsp/obsbot/
+python2.7 copilot.py --night --no-show
+mv night.png "/home2/declsp/observing/logs/"$1'.png'
+mv radec.png "/home2/declsp/observing/logs/"$1'radec.png'
+cd /home2/declsp/observing/logs/
+# Comment out the SVN lines ######
+# $SVN add $1'.png'
+# $SVN add $1'radec.png'
+# $SVN -m "" commit
+
+# commit the tiles status file and bad exposure file
+cd /home2/declsp/observing/obstatus/
+echo "committing tile status and bad exposures"
+# Comment out the SVN lines ######
+# $SVN -m "bad exp update" commit bad_expid.txt
+# $SVN -m "obstatus update" commit decam-tiles_obstatus.fits
+
+echo "First column shows number of z/r/g frames:"
+grep " z " Almanac_$1'.txt' | wc -l
+grep " r " Almanac_$1'.txt' | wc -l
+grep " g " Almanac_$1'.txt' | wc -l
+
+cd /home2/declsp/
+
+echo "#"
+echo "# All done with nightly book keeping for "$1
+echo "#" 

@@ -1,0 +1,4 @@
+#! /bin/bash
+
+vncserver -kill :1 2>/dev/null
+vncserver :1 -name "`whoami`@`hostname -s`" -geometry 1920x1080 -AlwaysShared -localhost=no

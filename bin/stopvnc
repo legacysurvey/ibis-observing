@@ -1,0 +1,4 @@
+#! /bin/env bash
+
+vncserver -kill :1 2>/dev/null
+

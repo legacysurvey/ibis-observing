@@ -1,0 +1,3 @@
+#! /bin/bash
+cd ~/obsbot
+python3 -u copilot.py "$@"

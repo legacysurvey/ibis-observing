@@ -1,0 +1,39 @@
+#! /bin/env bash
+
+if [ -z "$1" ]
+  then
+    echo "No argument supplied"
+    echo "syntax: > end_of_night YYYY-MM-DD firstImage"
+    echo "exiting" 
+exit 1
+fi
+
+# Stop vnc session
+
+cd /home2/declsp 
+echo "doing almanac, psfmovie, and coverage"
+
+cd ~/observing/logs
+echo "Doing almanac file and plot"
+\rm ./idlbatch
+echo almanac,$2 >> idlbatch
+echo "plotalmanac,'Almanac_$1.fits',ps='plot_Almanac_$1'" >> idlbatch
+#echo psfmovie >> idlbatch
+echo coverage_plot >> idlbatch
+echo exit >> idlbatch
+idl idlbatch
+svn add *Almanac_$1.*
+svn -m "" commit *Almanac_$1.*
+#mv PSF_contours.ps "PSF_$1"'.ps'
+#gzip "PSF_$1"'.ps'
+
+# do copilot nightly plot
+grep " z " Almanac_$1'.txt' | wc
+grep " r " Almanac_$1'.txt' | wc
+grep " g " Almanac_$1'.txt' | wc
+
+cd /home2/declsp/
+
+echo "#"
+echo "# All done with nightly book keeping for "$1
+echo "#" 
