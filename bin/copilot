@@ -1,3 +1,4 @@
 #! /bin/bash
+export PYTHONPATH=~/python-libs
 cd ~/obsbot
 python3 -u copilot.py "$@"
