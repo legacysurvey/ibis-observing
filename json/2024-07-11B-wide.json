@@ -19,13 +19,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_wide_M464_351982",
+  "object": "IBIS_wide_M464_349017",
   "expTime":       300.000,
   "filter": "M464",
   "approx_datetime": "2024/07/12 04:54:28.00",
-  "approx_airmass":       1.06696,
-  "RA": 308.041,
-  "dec": -14.838
+  "approx_airmass":       1.08446,
+  "RA": 309.111,
+  "dec": -12.660
  },
  {
   "seqid": "1",
@@ -33,13 +33,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_wide_M464_351990",
+  "object": "IBIS_wide_M464_349012",
   "expTime":       300.000,
   "filter": "M464",
   "approx_datetime": "2024/07/12 05:00:03.00",
-  "approx_airmass":       1.06425,
-  "RA": 306.646,
-  "dec": -13.417
+  "approx_airmass":       1.08378,
+  "RA": 310.335,
+  "dec": -12.638
  },
  {
   "seqid": "1",
@@ -47,13 +47,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_wide_M464_351985",
+  "object": "IBIS_wide_M464_351974",
   "expTime":       300.000,
   "filter": "M464",
   "approx_datetime": "2024/07/12 05:05:38.00",
-  "approx_airmass":       1.06232,
-  "RA": 308.752,
-  "dec": -14.198
+  "approx_airmass":       1.08009,
+  "RA": 312.312,
+  "dec": -13.682
  },
  {
   "seqid": "1",
@@ -61,13 +61,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_wide_M464_351986",
+  "object": "IBIS_wide_M464_349020",
   "expTime":       300.000,
   "filter": "M464",
   "approx_datetime": "2024/07/12 05:11:13.00",
-  "approx_airmass":       1.06315,
-  "RA": 309.560,
-  "dec": -13.678
+  "approx_airmass":       1.07583,
+  "RA": 309.245,
+  "dec": -11.429
  },
  {
   "seqid": "1",
@@ -75,13 +75,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_wide_M464_351967",
+  "object": "IBIS_wide_M464_349015",
   "expTime":       300.000,
   "filter": "M464",
   "approx_datetime": "2024/07/12 05:16:48.00",
-  "approx_airmass":       1.07294,
-  "RA": 314.954,
-  "dec": -14.804
+  "approx_airmass":       1.07418,
+  "RA": 311.252,
+  "dec": -12.017
  },
  {
   "seqid": "1",

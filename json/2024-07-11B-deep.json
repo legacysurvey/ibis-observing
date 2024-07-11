@@ -5,13 +5,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_desi332_M411_66",
+  "object": "IBIS_deep_desi332_M411_67",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 04:48:53.00",
-  "approx_airmass":       1.51854,
-  "RA": 330.902,
-  "dec": 1.587
+  "approx_airmass":       1.51897,
+  "RA": 331.131,
+  "dec": 1.368
  },
  {
   "seqid": "1",
@@ -19,13 +19,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_desi332_M411_67",
+  "object": "IBIS_deep_desi332_M411_68",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 04:54:28.00",
-  "approx_airmass":       1.48928,
-  "RA": 331.131,
-  "dec": 1.368
+  "approx_airmass":       1.49134,
+  "RA": 331.399,
+  "dec": 1.196
  },
  {
   "seqid": "1",
@@ -33,13 +33,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_65",
+  "object": "IBIS_deep_deep2f3_M411_66",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 05:00:03.00",
-  "approx_airmass":       2.02536,
-  "RA": 350.819,
-  "dec": -1.232
+  "approx_airmass":       2.02562,
+  "RA": 351.002,
+  "dec": -1.492
  },
  {
   "seqid": "1",
@@ -47,13 +47,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_66",
+  "object": "IBIS_deep_deep2f3_M411_68",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 05:05:38.00",
-  "approx_airmass":       1.95665,
-  "RA": 351.002,
-  "dec": -1.492
+  "approx_airmass":       1.96741,
+  "RA": 351.498,
+  "dec": -1.884
  },
  {
   "seqid": "1",
@@ -61,13 +61,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_67",
+  "object": "IBIS_deep_deep2f3_M411_82",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 05:11:13.00",
-  "approx_airmass":       1.89653,
-  "RA": 351.231,
-  "dec": -1.712
+  "approx_airmass":       1.91077,
+  "RA": 351.292,
+  "dec": -1.338
  },
  {
   "seqid": "1",
@@ -75,13 +75,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_64",
+  "object": "IBIS_deep_deep2f3_M411_83",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 05:16:48.00",
-  "approx_airmass":       1.83848,
-  "RA": 350.693,
-  "dec": -0.941
+  "approx_airmass":       1.85529,
+  "RA": 351.537,
+  "dec": -1.539
  },
  {
   "seqid": "1",
@@ -89,13 +89,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_68",
+  "object": "IBIS_deep_deep2f3_M411_79",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 05:22:23.00",
-  "approx_airmass":       1.78895,
-  "RA": 351.498,
-  "dec": -1.884
+  "approx_airmass":       1.80683,
+  "RA": 350.939,
+  "dec": -0.476
  },
  {
   "seqid": "1",
@@ -103,13 +103,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_63",
+  "object": "IBIS_deep_deep2f3_M411_84",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 05:27:58.00",
-  "approx_airmass":       1.74075,
-  "RA": 350.629,
-  "dec": -0.630
+  "approx_airmass":       1.75514,
+  "RA": 351.823,
+  "dec": -1.677
  },
  {
   "seqid": "1",
@@ -117,13 +117,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_82",
+  "object": "IBIS_deep_deep2f3_M411_61",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 05:33:33.00",
-  "approx_airmass":       1.69816,
-  "RA": 351.292,
-  "dec": -1.338
+  "approx_airmass":       1.71259,
+  "RA": 350.703,
+  "dec": -0.003
  },
  {
   "seqid": "1",
@@ -131,13 +131,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_69",
+  "object": "IBIS_deep_deep2f3_M411_45",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 05:39:08.00",
-  "approx_airmass":       1.65419,
-  "RA": 351.793,
-  "dec": -2.003
+  "approx_airmass":       1.67027,
+  "RA": 350.496,
+  "dec": 0.321
  },
  {
   "seqid": "1",
@@ -145,13 +145,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_81",
+  "object": "IBIS_deep_deep2f3_M411_85",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 05:44:43.00",
-  "approx_airmass":       1.61425,
-  "RA": 351.101,
-  "dec": -1.084
+  "approx_airmass":       1.62861,
+  "RA": 352.132,
+  "dec": -1.749
  },
  {
   "seqid": "1",
@@ -159,13 +159,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_83",
+  "object": "IBIS_deep_deep2f3_M411_78",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 05:50:18.00",
-  "approx_airmass":       1.57835,
-  "RA": 351.537,
-  "dec": -1.539
+  "approx_airmass":       1.59361,
+  "RA": 350.984,
+  "dec": -0.162
  },
  {
   "seqid": "1",
@@ -173,13 +173,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_80",
+  "object": "IBIS_deep_deep2f3_M411_5",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 05:55:53.00",
-  "approx_airmass":       1.54469,
-  "RA": 350.980,
-  "dec": -0.791
+  "approx_airmass":       1.55824,
+  "RA": 351.254,
+  "dec": -0.462
  },
  {
   "seqid": "1",
@@ -187,13 +187,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_62",
+  "object": "IBIS_deep_deep2f3_M411_86",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 06:01:28.00",
-  "approx_airmass":       1.51365,
-  "RA": 350.631,
-  "dec": -0.312
+  "approx_airmass":       1.52707,
+  "RA": 352.450,
+  "dec": -1.751
  },
  {
   "seqid": "1",
@@ -201,13 +201,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_84",
+  "object": "IBIS_deep_deep2f3_M411_25",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 06:07:03.00",
-  "approx_airmass":       1.48285,
-  "RA": 351.823,
-  "dec": -1.677
+  "approx_airmass":       1.49809,
+  "RA": 351.575,
+  "dec": -0.591
  },
  {
   "seqid": "1",
@@ -215,13 +215,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_46",
+  "object": "IBIS_deep_deep2f3_M411_60",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 06:12:38.00",
-  "approx_airmass":       1.45638,
-  "RA": 350.377,
-  "dec": 0.027
+  "approx_airmass":       1.47034,
+  "RA": 350.841,
+  "dec": 0.282
  },
  {
   "seqid": "1",
@@ -229,13 +229,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_7",
+  "object": "IBIS_deep_deep2f3_M411_4",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 06:18:13.00",
-  "approx_airmass":       1.43091,
-  "RA": 351.460,
-  "dec": -1.050
+  "approx_airmass":       1.44435,
+  "RA": 351.322,
+  "dec": -0.153
  },
  {
   "seqid": "1",
@@ -243,13 +243,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_85",
+  "object": "IBIS_deep_deep2f3_M411_87",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 06:23:48.00",
-  "approx_airmass":       1.40580,
-  "RA": 352.132,
-  "dec": -1.749
+  "approx_airmass":       1.41813,
+  "RA": 352.761,
+  "dec": -1.687
  },
  {
   "seqid": "1",
@@ -257,13 +257,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_8",
+  "object": "IBIS_deep_deep2f3_M411_11",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 06:29:23.00",
-  "approx_airmass":       1.38256,
-  "RA": 351.695,
-  "dec": -1.263
+  "approx_airmass":       1.39560,
+  "RA": 352.611,
+  "dec": -1.400
  },
  {
   "seqid": "1",
@@ -271,13 +271,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_79",
+  "object": "IBIS_deep_deep2f3_M411_77",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 06:34:58.00",
-  "approx_airmass":       1.36153,
-  "RA": 350.939,
-  "dec": -0.476
+  "approx_airmass":       1.37405,
+  "RA": 351.117,
+  "dec": 0.125
  },
  {
   "seqid": "1",
@@ -285,13 +285,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_6",
+  "object": "IBIS_deep_deep2f3_M411_47",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 06:40:33.00",
-  "approx_airmass":       1.34180,
-  "RA": 351.305,
-  "dec": -0.774
+  "approx_airmass":       1.35315,
+  "RA": 352.099,
+  "dec": -0.780
  },
  {
   "seqid": "1",
@@ -299,13 +299,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_9",
+  "object": "IBIS_deep_deep2f3_M411_24",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 06:46:08.00",
-  "approx_airmass":       1.32244,
-  "RA": 351.982,
-  "dec": -1.396
+  "approx_airmass":       1.33420,
+  "RA": 351.600,
+  "dec": -0.279
  },
  {
   "seqid": "1",
@@ -313,13 +313,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_86",
+  "object": "IBIS_deep_deep2f3_M411_29",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 06:51:43.00",
-  "approx_airmass":       1.30511,
-  "RA": 352.450,
-  "dec": -1.751
+  "approx_airmass":       1.31677,
+  "RA": 352.594,
+  "dec": -1.075
  },
  {
   "seqid": "1",
@@ -327,13 +327,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_10",
+  "object": "IBIS_deep_deep2f3_M411_12",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 06:57:18.00",
-  "approx_airmass":       1.29043,
-  "RA": 352.296,
-  "dec": -1.441
+  "approx_airmass":       1.30006,
+  "RA": 352.904,
+  "dec": -1.278
  },
  {
   "seqid": "1",
@@ -341,13 +341,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_26",
+  "object": "IBIS_deep_deep2f3_M411_48",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 07:02:53.00",
-  "approx_airmass":       1.27599,
-  "RA": 351.718,
-  "dec": -0.872
+  "approx_airmass":       1.28460,
+  "RA": 352.412,
+  "dec": -0.804
  },
  {
   "seqid": "1",
@@ -355,13 +355,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_87",
+  "object": "IBIS_deep_deep2f3_M411_89",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 07:08:28.00",
-  "approx_airmass":       1.26110,
-  "RA": 352.761,
-  "dec": -1.687
+  "approx_airmass":       1.27111,
+  "RA": 353.312,
+  "dec": -1.378
  },
  {
   "seqid": "1",
@@ -369,13 +369,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_27",
+  "object": "IBIS_deep_deep2f3_M411_44",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 07:14:03.00",
-  "approx_airmass":       1.24776,
-  "RA": 351.973,
-  "dec": -1.058
+  "approx_airmass":       1.25822,
+  "RA": 350.668,
+  "dec": 0.588
  },
  {
   "seqid": "1",
@@ -383,13 +383,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_11",
+  "object": "IBIS_deep_deep2f3_M411_30",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 07:19:38.00",
-  "approx_airmass":       1.23630,
-  "RA": 352.611,
-  "dec": -1.400
+  "approx_airmass":       1.24492,
+  "RA": 352.870,
+  "dec": -0.920
  },
  {
   "seqid": "1",
@@ -397,13 +397,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_28",
+  "object": "IBIS_deep_deep2f3_M411_13",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 07:25:13.00",
-  "approx_airmass":       1.22504,
-  "RA": 352.282,
-  "dec": -1.126
+  "approx_airmass":       1.23285,
+  "RA": 353.158,
+  "dec": -1.088
  },
  {
   "seqid": "1",
@@ -411,13 +411,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_88",
+  "object": "IBIS_deep_deep2f3_M411_49",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 07:30:48.00",
-  "approx_airmass":       1.21457,
-  "RA": 353.052,
-  "dec": -1.560
+  "approx_airmass":       1.22311,
+  "RA": 352.692,
+  "dec": -0.662
  },
  {
   "seqid": "1",
@@ -425,13 +425,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_deep2f3_M411_5",
+  "object": "IBIS_deep_deep2f3_M411_90",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 07:36:23.00",
-  "approx_airmass":       1.20542,
-  "RA": 351.254,
-  "dec": -0.462
+  "approx_airmass":       1.21270,
+  "RA": 353.532,
+  "dec": -1.148
  },
  {
   "seqid": "1",
@@ -439,13 +439,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_65",
+  "object": "IBIS_deep_xmm_M411_64",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 07:41:58.00",
-  "approx_airmass":       2.03302,
-  "RA": 34.463,
-  "dec": -5.701
+  "approx_airmass":       2.03595,
+  "RA": 34.337,
+  "dec": -5.409
  },
  {
   "seqid": "1",
@@ -453,13 +453,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_66",
+  "object": "IBIS_deep_xmm_M411_67",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 07:47:33.00",
-  "approx_airmass":       1.96268,
-  "RA": 34.646,
-  "dec": -5.961
+  "approx_airmass":       1.96734,
+  "RA": 34.877,
+  "dec": -6.181
  },
  {
   "seqid": "1",
@@ -467,13 +467,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_64",
+  "object": "IBIS_deep_xmm_M411_82",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 07:53:08.00",
-  "approx_airmass":       1.89876,
-  "RA": 34.337,
-  "dec": -5.409
+  "approx_airmass":       1.91466,
+  "RA": 34.938,
+  "dec": -5.807
  },
  {
   "seqid": "1",
@@ -481,13 +481,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_67",
+  "object": "IBIS_deep_xmm_M411_45",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 07:58:43.00",
-  "approx_airmass":       1.84027,
-  "RA": 34.877,
-  "dec": -6.181
+  "approx_airmass":       1.86477,
+  "RA": 34.142,
+  "dec": -4.147
  },
  {
   "seqid": "1",
@@ -495,13 +495,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_82",
+  "object": "IBIS_deep_xmm_M411_7",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 08:04:18.00",
-  "approx_airmass":       1.79579,
-  "RA": 34.938,
-  "dec": -5.807
+  "approx_airmass":       1.80979,
+  "RA": 35.107,
+  "dec": -5.520
  },
  {
   "seqid": "1",
@@ -509,13 +509,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_45",
+  "object": "IBIS_deep_xmm_M411_85",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 08:09:53.00",
-  "approx_airmass":       1.75446,
-  "RA": 34.142,
-  "dec": -4.147
+  "approx_airmass":       1.76437,
+  "RA": 35.783,
+  "dec": -6.219
  },
  {
   "seqid": "1",
@@ -523,13 +523,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_7",
+  "object": "IBIS_deep_xmm_M411_60",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 08:15:28.00",
-  "approx_airmass":       1.70646,
-  "RA": 35.107,
-  "dec": -5.520
+  "approx_airmass":       1.71628,
+  "RA": 34.488,
+  "dec": -4.186
  },
  {
   "seqid": "1",
@@ -537,13 +537,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_85",
+  "object": "IBIS_deep_xmm_M411_44",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 08:21:03.00",
-  "approx_airmass":       1.66704,
-  "RA": 35.783,
-  "dec": -6.219
+  "approx_airmass":       1.67139,
+  "RA": 34.315,
+  "dec": -3.880
  },
  {
   "seqid": "1",
@@ -551,13 +551,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_60",
+  "object": "IBIS_deep_xmm_M411_26",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 08:26:38.00",
-  "approx_airmass":       1.62708,
-  "RA": 34.488,
-  "dec": -4.186
+  "approx_airmass":       1.62900,
+  "RA": 35.366,
+  "dec": -5.342
  },
  {
   "seqid": "1",
@@ -565,13 +565,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_26",
+  "object": "IBIS_deep_xmm_M411_25",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 08:32:13.00",
-  "approx_airmass":       1.58850,
-  "RA": 35.366,
-  "dec": -5.342
+  "approx_airmass":       1.59005,
+  "RA": 35.223,
+  "dec": -5.061
  },
  {
   "seqid": "1",
@@ -579,13 +579,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_44",
+  "object": "IBIS_deep_xmm_M411_86",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 08:37:48.00",
-  "approx_airmass":       1.55145,
-  "RA": 34.315,
-  "dec": -3.880
+  "approx_airmass":       1.55381,
+  "RA": 36.102,
+  "dec": -6.221
  },
  {
   "seqid": "1",
@@ -593,13 +593,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_25",
+  "object": "IBIS_deep_xmm_M411_27",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 08:43:23.00",
-  "approx_airmass":       1.51722,
-  "RA": 35.223,
-  "dec": -5.061
+  "approx_airmass":       1.51860,
+  "RA": 35.622,
+  "dec": -5.528
  },
  {
   "seqid": "1",
@@ -607,13 +607,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_86",
+  "object": "IBIS_deep_xmm_M411_4",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 08:48:58.00",
-  "approx_airmass":       1.48492,
-  "RA": 36.102,
-  "dec": -6.221
+  "approx_airmass":       1.48628,
+  "RA": 34.969,
+  "dec": -4.622
  },
  {
   "seqid": "1",
@@ -621,13 +621,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_27",
+  "object": "IBIS_deep_xmm_M411_10",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 08:54:33.00",
-  "approx_airmass":       1.45473,
-  "RA": 35.622,
-  "dec": -5.528
+  "approx_airmass":       1.45550,
+  "RA": 35.947,
+  "dec": -5.911
  },
  {
   "seqid": "1",
@@ -635,13 +635,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_10",
+  "object": "IBIS_deep_xmm_M411_77",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 09:00:08.00",
-  "approx_airmass":       1.42650,
-  "RA": 35.947,
-  "dec": -5.911
+  "approx_airmass":       1.42764,
+  "RA": 34.764,
+  "dec": -4.344
  },
  {
   "seqid": "1",
@@ -649,13 +649,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_4",
+  "object": "IBIS_deep_xmm_M411_24",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 09:05:43.00",
-  "approx_airmass":       1.40057,
-  "RA": 34.969,
-  "dec": -4.622
+  "approx_airmass":       1.40379,
+  "RA": 35.248,
+  "dec": -4.749
  },
  {
   "seqid": "1",
@@ -663,13 +663,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_77",
+  "object": "IBIS_deep_xmm_M411_87",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 09:11:18.00",
-  "approx_airmass":       1.37624,
-  "RA": 34.764,
-  "dec": -4.344
+  "approx_airmass":       1.37881,
+  "RA": 36.415,
+  "dec": -6.157
  },
  {
   "seqid": "1",
@@ -677,13 +677,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_87",
+  "object": "IBIS_deep_xmm_M411_3",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 09:16:53.00",
-  "approx_airmass":       1.35470,
-  "RA": 36.415,
-  "dec": -6.157
+  "approx_airmass":       1.35903,
+  "RA": 35.156,
+  "dec": -4.368
  },
  {
   "seqid": "1",
@@ -691,13 +691,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_24",
+  "object": "IBIS_deep_xmm_M411_29",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 09:22:28.00",
-  "approx_airmass":       1.33306,
-  "RA": 35.248,
-  "dec": -4.749
+  "approx_airmass":       1.33766,
+  "RA": 36.246,
+  "dec": -5.544
  },
  {
   "seqid": "1",
@@ -705,13 +705,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_3",
+  "object": "IBIS_deep_xmm_M411_2",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 09:28:03.00",
-  "approx_airmass":       1.31627,
-  "RA": 35.156,
-  "dec": -4.368
+  "approx_airmass":       1.32226,
+  "RA": 35.438,
+  "dec": -4.225
  },
  {
   "seqid": "1",
@@ -719,13 +719,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_29",
+  "object": "IBIS_deep_xmm_M411_89",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 09:33:38.00",
-  "approx_airmass":       1.29659,
-  "RA": 36.246,
-  "dec": -5.544
+  "approx_airmass":       1.30280,
+  "RA": 36.968,
+  "dec": -5.847
  },
  {
   "seqid": "1",
@@ -733,13 +733,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_89",
+  "object": "IBIS_deep_xmm_M411_42",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 09:39:13.00",
-  "approx_airmass":       1.28372,
-  "RA": 36.968,
-  "dec": -5.847
+  "approx_airmass":       1.28606,
+  "RA": 34.796,
+  "dec": -3.469
  },
  {
   "seqid": "1",
@@ -747,13 +747,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_2",
+  "object": "IBIS_deep_xmm_M411_70",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 09:44:48.00",
-  "approx_airmass":       1.26716,
-  "RA": 35.438,
-  "dec": -4.225
+  "approx_airmass":       1.27039,
+  "RA": 36.252,
+  "dec": -4.751
  },
  {
   "seqid": "1",
@@ -761,13 +761,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_42",
+  "object": "IBIS_deep_xmm_M411_1",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 09:50:23.00",
-  "approx_airmass":       1.25349,
-  "RA": 34.796,
-  "dec": -3.469
+  "approx_airmass":       1.25436,
+  "RA": 35.751,
+  "dec": -4.250
  },
  {
   "seqid": "1",
@@ -775,13 +775,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_70",
+  "object": "IBIS_deep_xmm_M411_90",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 09:55:58.00",
-  "approx_airmass":       1.23860,
-  "RA": 36.252,
-  "dec": -4.751
+  "approx_airmass":       1.23866,
+  "RA": 37.189,
+  "dec": -5.617
  },
  {
   "seqid": "1",
@@ -789,13 +789,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_90",
+  "object": "IBIS_deep_xmm_M411_31",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 10:01:33.00",
-  "approx_airmass":       1.22393,
-  "RA": 37.189,
-  "dec": -5.617
+  "approx_airmass":       1.22454,
+  "RA": 36.737,
+  "dec": -5.155
  },
  {
   "seqid": "1",
@@ -803,13 +803,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_31",
+  "object": "IBIS_deep_xmm_M411_14",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 10:07:08.00",
-  "approx_airmass":       1.21103,
-  "RA": 36.737,
-  "dec": -5.155
+  "approx_airmass":       1.21191,
+  "RA": 37.014,
+  "dec": -5.311
  },
  {
   "seqid": "1",
@@ -817,13 +817,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_14",
+  "object": "IBIS_deep_xmm_M411_50",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 10:12:43.00",
-  "approx_airmass":       1.19921,
-  "RA": 37.014,
-  "dec": -5.311
+  "approx_airmass":       1.19972,
+  "RA": 36.531,
+  "dec": -4.877
  },
  {
   "seqid": "1",
@@ -831,13 +831,13 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_50",
+  "object": "IBIS_deep_xmm_M411_91",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 10:18:18.00",
-  "approx_airmass":       1.18816,
-  "RA": 36.531,
-  "dec": -4.877
+  "approx_airmass":       1.18987,
+  "RA": 37.361,
+  "dec": -5.349
  },
  {
   "seqid": "1",
@@ -845,12 +845,12 @@
   "seqtot": 61,
   "expType": "object",
   "propid": "2023B-184194",
-  "object": "IBIS_deep_xmm_M411_1",
+  "object": "IBIS_deep_xmm_M411_32",
   "expTime":       300.000,
   "filter": "M411",
   "approx_datetime": "2024/07/12 10:23:53.00",
-  "approx_airmass":       1.17849,
-  "RA": 35.751,
-  "dec": -4.250
+  "approx_airmass":       1.18009,
+  "RA": 36.870,
+  "dec": -4.867
  }
 ]
