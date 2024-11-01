@@ -8,7 +8,7 @@
   "object": "IBIS_wide_M490_457763",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 00:14:22.00",
+  "approx_datetime": "2024/11/01 00:14:22.00",
   "approx_airmass":       1.04125,
   "RA": 336.905,
   "dec": -14.741
@@ -22,7 +22,7 @@
   "object": "IBIS_wide_M490_457758",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 00:19:57.00",
+  "approx_datetime": "2024/11/01 00:19:57.00",
   "approx_airmass":       1.04076,
   "RA": 338.466,
   "dec": -14.885
@@ -36,7 +36,7 @@
   "object": "IBIS_wide_M490_457759",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 00:25:32.00",
+  "approx_datetime": "2024/11/01 00:25:32.00",
   "approx_airmass":       1.04100,
   "RA": 339.789,
   "dec": -14.814
@@ -50,7 +50,7 @@
   "object": "IBIS_wide_M490_457674",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 00:31:07.00",
+  "approx_datetime": "2024/11/01 00:31:07.00",
   "approx_airmass":       1.04038,
   "RA": 341.152,
   "dec": -14.927
@@ -64,7 +64,7 @@
   "object": "IBIS_wide_M490_454774",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 00:36:42.00",
+  "approx_datetime": "2024/11/01 00:36:42.00",
   "approx_airmass":       1.03954,
   "RA": 340.094,
   "dec": -14.540
@@ -78,7 +78,7 @@
   "object": "IBIS_wide_M490_457979",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 00:42:17.00",
+  "approx_datetime": "2024/11/01 00:42:17.00",
   "approx_airmass":       1.03830,
   "RA": 342.548,
   "dec": -14.984
@@ -92,7 +92,7 @@
   "object": "IBIS_wide_M490_454988",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 00:47:52.00",
+  "approx_datetime": "2024/11/01 00:47:52.00",
   "approx_airmass":       1.03887,
   "RA": 343.540,
   "dec": -14.786
@@ -106,7 +106,7 @@
   "object": "IBIS_wide_M490_457974",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 00:53:27.00",
+  "approx_datetime": "2024/11/01 00:53:27.00",
   "approx_airmass":       1.03784,
   "RA": 344.041,
   "dec": -14.838
@@ -120,7 +120,7 @@
   "object": "IBIS_wide_M490_454989",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 00:59:02.00",
+  "approx_datetime": "2024/11/01 00:59:02.00",
   "approx_airmass":       1.03688,
   "RA": 344.967,
   "dec": -14.970
@@ -134,7 +134,7 @@
   "object": "IBIS_wide_M490_457975",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 01:04:37.00",
+  "approx_datetime": "2024/11/01 01:04:37.00",
   "approx_airmass":       1.03718,
   "RA": 345.631,
   "dec": -14.835
@@ -148,7 +148,7 @@
   "object": "IBIS_wide_M490_457954",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 01:10:12.00",
+  "approx_datetime": "2024/11/01 01:10:12.00",
   "approx_airmass":       1.03722,
   "RA": 346.886,
   "dec": -14.817
@@ -162,7 +162,7 @@
   "object": "IBIS_wide_M490_457963",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 01:15:47.00",
+  "approx_datetime": "2024/11/01 01:15:47.00",
   "approx_airmass":       1.03784,
   "RA": 348.188,
   "dec": -14.685
@@ -176,7 +176,7 @@
   "object": "IBIS_wide_M490_457958",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 01:21:22.00",
+  "approx_datetime": "2024/11/01 01:21:22.00",
   "approx_airmass":       1.03761,
   "RA": 349.725,
   "dec": -14.741
@@ -190,7 +190,7 @@
   "object": "IBIS_wide_M490_457959",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 01:26:57.00",
+  "approx_datetime": "2024/11/01 01:26:57.00",
   "approx_airmass":       1.03724,
   "RA": 350.954,
   "dec": -14.804
@@ -204,7 +204,7 @@
   "object": "IBIS_wide_M490_459867",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 01:32:32.00",
+  "approx_datetime": "2024/11/01 01:32:32.00",
   "approx_airmass":       1.03747,
   "RA": 352.510,
   "dec": -14.767
@@ -218,7 +218,7 @@
   "object": "IBIS_wide_M490_459894",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 01:38:07.00",
+  "approx_datetime": "2024/11/01 01:38:07.00",
   "approx_airmass":       1.03764,
   "RA": 353.779,
   "dec": -14.725
@@ -232,7 +232,7 @@
   "object": "IBIS_wide_M490_459889",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 01:43:42.00",
+  "approx_datetime": "2024/11/01 01:43:42.00",
   "approx_airmass":       1.03738,
   "RA": 355.370,
   "dec": -14.791
@@ -246,7 +246,7 @@
   "object": "IBIS_wide_M490_459890",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 01:49:17.00",
+  "approx_datetime": "2024/11/01 01:49:17.00",
   "approx_airmass":       1.03712,
   "RA": 356.620,
   "dec": -14.832
@@ -260,7 +260,7 @@
   "object": "IBIS_wide_M490_456874",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 01:54:52.00",
+  "approx_datetime": "2024/11/01 01:54:52.00",
   "approx_airmass":       1.03698,
   "RA": 358.663,
   "dec": -14.915
@@ -274,7 +274,7 @@
   "object": "IBIS_wide_M490_459882",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 02:00:27.00",
+  "approx_datetime": "2024/11/01 02:00:27.00",
   "approx_airmass":       1.03696,
   "RA": 358.199,
   "dec": -14.822
@@ -288,7 +288,7 @@
   "object": "IBIS_wide_M490_454826",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 02:06:02.00",
+  "approx_datetime": "2024/11/01 02:06:02.00",
   "approx_airmass":       1.03700,
   "RA": 359.652,
   "dec": -14.813
@@ -302,7 +302,7 @@
   "object": "IBIS_wide_M490_403884",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 02:11:37.00",
+  "approx_datetime": "2024/11/01 02:11:37.00",
   "approx_airmass":       1.03695,
   "RA": 0.799,
   "dec": -14.825
@@ -316,7 +316,7 @@
   "object": "IBIS_wide_M490_403888",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 02:17:12.00",
+  "approx_datetime": "2024/11/01 02:17:12.00",
   "approx_airmass":       1.03705,
   "RA": 3.196,
   "dec": -14.823
@@ -330,7 +330,7 @@
   "object": "IBIS_wide_M490_403893",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 02:22:47.00",
+  "approx_datetime": "2024/11/01 02:22:47.00",
   "approx_airmass":       1.03759,
   "RA": 1.747,
   "dec": -14.810
@@ -344,7 +344,7 @@
   "object": "IBIS_wide_M490_403810",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 02:28:22.00",
+  "approx_datetime": "2024/11/01 02:28:22.00",
   "approx_airmass":       1.03709,
   "RA": 5.961,
   "dec": -14.813
@@ -358,7 +358,7 @@
   "object": "IBIS_wide_M490_403851",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 02:33:57.00",
+  "approx_datetime": "2024/11/01 02:33:57.00",
   "approx_airmass":       1.03680,
   "RA": 7.215,
   "dec": -14.866
@@ -372,7 +372,7 @@
   "object": "IBIS_wide_M490_400866",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 02:39:32.00",
+  "approx_datetime": "2024/11/01 02:39:32.00",
   "approx_airmass":       1.03776,
   "RA": 7.671,
   "dec": -14.665
@@ -386,7 +386,7 @@
   "object": "IBIS_wide_M490_403846",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 02:45:07.00",
+  "approx_datetime": "2024/11/01 02:45:07.00",
   "approx_airmass":       1.03781,
   "RA": 8.840,
   "dec": -14.659
@@ -400,7 +400,7 @@
   "object": "IBIS_wide_M490_403847",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 02:50:42.00",
+  "approx_datetime": "2024/11/01 02:50:42.00",
   "approx_airmass":       1.03782,
   "RA": 10.253,
   "dec": -14.658
@@ -414,7 +414,7 @@
   "object": "IBIS_wide_M490_400840",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 02:56:17.00",
+  "approx_datetime": "2024/11/01 02:56:17.00",
   "approx_airmass":       1.03819,
   "RA": 11.488,
   "dec": -14.589
@@ -428,7 +428,7 @@
   "object": "IBIS_wide_M490_400850",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 03:01:52.00",
+  "approx_datetime": "2024/11/01 03:01:52.00",
   "approx_airmass":       1.03872,
   "RA": 13.436,
   "dec": -14.472
@@ -442,7 +442,7 @@
   "object": "IBIS_wide_M490_403830",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 03:07:27.00",
+  "approx_datetime": "2024/11/01 03:07:27.00",
   "approx_airmass":       1.03668,
   "RA": 14.466,
   "dec": -14.885
@@ -456,7 +456,7 @@
   "object": "IBIS_wide_M490_403835",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 03:13:02.00",
+  "approx_datetime": "2024/11/01 03:13:02.00",
   "approx_airmass":       1.03902,
   "RA": 12.905,
   "dec": -14.741
@@ -470,7 +470,7 @@
   "object": "IBIS_wide_M490_403833",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 03:18:37.00",
+  "approx_datetime": "2024/11/01 03:18:37.00",
   "approx_airmass":       1.03980,
   "RA": 15.087,
   "dec": -14.456
@@ -484,7 +484,7 @@
   "object": "IBIS_wide_M490_403831",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 03:24:12.00",
+  "approx_datetime": "2024/11/01 03:24:12.00",
   "approx_airmass":       1.03857,
   "RA": 15.789,
   "dec": -14.814
@@ -498,7 +498,7 @@
   "object": "IBIS_wide_M490_400846",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 03:29:47.00",
+  "approx_datetime": "2024/11/01 03:29:47.00",
   "approx_airmass":       1.04114,
   "RA": 16.094,
   "dec": -14.540
@@ -512,7 +512,7 @@
   "object": "IBIS_wide_M490_404053",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 03:35:22.00",
+  "approx_datetime": "2024/11/01 03:35:22.00",
   "approx_airmass":       1.04251,
   "RA": 17.818,
   "dec": -14.200
@@ -526,7 +526,7 @@
   "object": "IBIS_wide_M490_403746",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 03:40:57.00",
+  "approx_datetime": "2024/11/01 03:40:57.00",
   "approx_airmass":       1.04176,
   "RA": 17.152,
   "dec": -14.927
@@ -540,7 +540,7 @@
   "object": "IBIS_wide_M490_401060",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 03:46:32.00",
+  "approx_datetime": "2024/11/01 03:46:32.00",
   "approx_airmass":       1.04091,
   "RA": 19.540,
   "dec": -14.786
@@ -554,7 +554,7 @@
   "object": "IBIS_wide_M490_404051",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 03:52:07.00",
+  "approx_datetime": "2024/11/01 03:52:07.00",
   "approx_airmass":       1.04416,
   "RA": 18.548,
   "dec": -14.984
@@ -568,7 +568,7 @@
   "object": "IBIS_wide_M490_404046",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 03:57:42.00",
+  "approx_datetime": "2024/11/01 03:57:42.00",
   "approx_airmass":       1.04470,
   "RA": 20.041,
   "dec": -14.838
@@ -582,7 +582,7 @@
   "object": "IBIS_wide_M490_401061",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 04:03:17.00",
+  "approx_datetime": "2024/11/01 04:03:17.00",
   "approx_airmass":       1.04505,
   "RA": 20.967,
   "dec": -14.970
@@ -596,7 +596,7 @@
   "object": "IBIS_wide_M490_404037",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 04:08:52.00",
+  "approx_datetime": "2024/11/01 04:08:52.00",
   "approx_airmass":       1.04715,
   "RA": 23.570,
   "dec": -14.086
@@ -610,7 +610,7 @@
   "object": "IBIS_wide_M490_404047",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 04:14:27.00",
+  "approx_datetime": "2024/11/01 04:14:27.00",
   "approx_airmass":       1.05114,
   "RA": 21.631,
   "dec": -14.835
@@ -624,7 +624,7 @@
   "object": "IBIS_wide_M490_404026",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 04:20:02.00",
+  "approx_datetime": "2024/11/01 04:20:02.00",
   "approx_airmass":       1.05164,
   "RA": 22.886,
   "dec": -14.817
@@ -638,7 +638,7 @@
   "object": "IBIS_wide_M490_404036",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 04:25:37.00",
+  "approx_datetime": "2024/11/01 04:25:37.00",
   "approx_airmass":       1.05282,
   "RA": 25.010,
   "dec": -14.211
@@ -652,7 +652,7 @@
   "object": "IBIS_wide_M490_401050",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 04:31:12.00",
+  "approx_datetime": "2024/11/01 04:31:12.00",
   "approx_airmass":       1.05667,
   "RA": 24.619,
   "dec": -14.478
@@ -666,7 +666,7 @@
   "object": "IBIS_wide_M490_404030",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 04:36:47.00",
+  "approx_datetime": "2024/11/01 04:36:47.00",
   "approx_airmass":       1.05623,
   "RA": 25.725,
   "dec": -14.741
@@ -680,7 +680,7 @@
   "object": "IBIS_wide_M490_404032",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 04:42:22.00",
+  "approx_datetime": "2024/11/01 04:42:22.00",
   "approx_airmass":       1.05664,
   "RA": 27.743,
   "dec": -14.293
@@ -694,7 +694,7 @@
   "object": "IBIS_wide_M490_404031",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 04:47:57.00",
+  "approx_datetime": "2024/11/01 04:47:57.00",
   "approx_airmass":       1.06143,
   "RA": 26.954,
   "dec": -14.804
@@ -708,7 +708,7 @@
   "object": "IBIS_wide_M490_401046",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 04:53:32.00",
+  "approx_datetime": "2024/11/01 04:53:32.00",
   "approx_airmass":       1.06663,
   "RA": 27.227,
   "dec": -14.661
@@ -722,7 +722,7 @@
   "object": "IBIS_wide_M490_405939",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 04:59:07.00",
+  "approx_datetime": "2024/11/01 04:59:07.00",
   "approx_airmass":       1.06654,
   "RA": 28.510,
   "dec": -14.767
@@ -736,7 +736,7 @@
   "object": "IBIS_wide_M490_402959",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 05:04:42.00",
+  "approx_datetime": "2024/11/01 05:04:42.00",
   "approx_airmass":       1.07195,
   "RA": 29.037,
   "dec": -14.464
@@ -750,7 +750,7 @@
   "object": "IBIS_wide_M490_402958",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 05:10:17.00",
+  "approx_datetime": "2024/11/01 05:10:17.00",
   "approx_airmass":       1.07290,
   "RA": 30.198,
   "dec": -14.485
@@ -764,7 +764,7 @@
   "object": "IBIS_wide_M490_405964",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 05:15:52.00",
+  "approx_datetime": "2024/11/01 05:15:52.00",
   "approx_airmass":       1.07296,
   "RA": 31.951,
   "dec": -14.194
@@ -778,7 +778,7 @@
   "object": "IBIS_wide_M490_405961",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 05:21:27.00",
+  "approx_datetime": "2024/11/01 05:21:27.00",
   "approx_airmass":       1.07895,
   "RA": 31.370,
   "dec": -14.791
@@ -792,7 +792,7 @@
   "object": "IBIS_wide_M490_402955",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 05:27:02.00",
+  "approx_datetime": "2024/11/01 05:27:02.00",
   "approx_airmass":       1.08770,
   "RA": 31.615,
   "dec": -14.319
@@ -806,7 +806,7 @@
   "object": "IBIS_wide_M490_405962",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 05:32:37.00",
+  "approx_datetime": "2024/11/01 05:32:37.00",
   "approx_airmass":       1.08690,
   "RA": 32.620,
   "dec": -14.832
@@ -820,7 +820,7 @@
   "object": "IBIS_wide_M490_402954",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 05:38:12.00",
+  "approx_datetime": "2024/11/01 05:38:12.00",
   "approx_airmass":       1.09409,
   "RA": 33.118,
   "dec": -14.480
@@ -834,7 +834,7 @@
   "object": "IBIS_wide_M490_402966",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 05:43:47.00",
+  "approx_datetime": "2024/11/01 05:43:47.00",
   "approx_airmass":       1.10182,
   "RA": 34.825,
   "dec": -12.942
@@ -848,7 +848,7 @@
   "object": "IBIS_wide_M490_405957",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 05:49:22.00",
+  "approx_datetime": "2024/11/01 05:49:22.00",
   "approx_airmass":       1.09941,
   "RA": 35.832,
   "dec": -13.688
@@ -862,7 +862,7 @@
   "object": "IBIS_wide_M490_406908",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 05:54:57.00",
+  "approx_datetime": "2024/11/01 05:54:57.00",
   "approx_airmass":       1.10573,
   "RA": 36.673,
   "dec": -13.230
@@ -876,7 +876,7 @@
   "object": "IBIS_wide_M490_405955",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 06:00:32.00",
+  "approx_datetime": "2024/11/01 06:00:32.00",
   "approx_airmass":       1.11569,
   "RA": 35.416,
   "dec": -14.444
@@ -890,7 +890,7 @@
   "object": "IBIS_wide_M490_409887",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 06:06:07.00",
+  "approx_datetime": "2024/11/01 06:06:07.00",
   "approx_airmass":       1.11396,
   "RA": 37.388,
   "dec": -14.083
@@ -904,7 +904,7 @@
   "object": "IBIS_wide_M490_409885",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 06:11:42.00",
+  "approx_datetime": "2024/11/01 06:11:42.00",
   "approx_airmass":       1.11678,
   "RA": 37.747,
   "dec": -14.810
@@ -918,7 +918,7 @@
   "object": "IBIS_wide_M490_409886",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 06:17:17.00",
+  "approx_datetime": "2024/11/01 06:17:17.00",
   "approx_airmass":       1.12296,
   "RA": 38.629,
   "dec": -14.431
@@ -932,7 +932,7 @@
   "object": "IBIS_wide_M490_406897",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 06:22:52.00",
+  "approx_datetime": "2024/11/01 06:22:52.00",
   "approx_airmass":       1.12782,
   "RA": 39.495,
   "dec": -14.305
@@ -946,7 +946,7 @@
   "object": "IBIS_wide_M490_409882",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 06:28:27.00",
+  "approx_datetime": "2024/11/01 06:28:27.00",
   "approx_airmass":       1.12626,
   "RA": 41.284,
   "dec": -14.088
@@ -960,7 +960,7 @@
   "object": "IBIS_wide_M490_409802",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 06:34:02.00",
+  "approx_datetime": "2024/11/01 06:34:02.00",
   "approx_airmass":       1.12715,
   "RA": 41.961,
   "dec": -14.813
@@ -974,7 +974,7 @@
   "object": "IBIS_wide_M490_409845",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 06:39:37.00",
+  "approx_datetime": "2024/11/01 06:39:37.00",
   "approx_airmass":       1.13756,
   "RA": 42.528,
   "dec": -14.233
@@ -988,7 +988,7 @@
   "object": "IBIS_wide_M490_409842",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 06:45:12.00",
+  "approx_datetime": "2024/11/01 06:45:12.00",
   "approx_airmass":       1.12764,
   "RA": 45.883,
   "dec": -13.427
@@ -1002,7 +1002,7 @@
   "object": "IBIS_wide_M490_406877",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 06:50:47.00",
+  "approx_datetime": "2024/11/01 06:50:47.00",
   "approx_airmass":       1.14366,
   "RA": 47.230,
   "dec": -11.269
@@ -1016,7 +1016,7 @@
   "object": "IBIS_wide_M490_409853",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 06:56:22.00",
+  "approx_datetime": "2024/11/01 06:56:22.00",
   "approx_airmass":       1.14488,
   "RA": 46.912,
   "dec": -12.957
@@ -1030,7 +1030,7 @@
   "object": "IBIS_wide_M490_409827",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 07:01:57.00",
+  "approx_datetime": "2024/11/01 07:01:57.00",
   "approx_airmass":       1.12802,
   "RA": 48.905,
   "dec": -14.741
@@ -1044,7 +1044,7 @@
   "object": "IBIS_wide_M490_409831",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 07:07:32.00",
+  "approx_datetime": "2024/11/01 07:07:32.00",
   "approx_airmass":       1.13519,
   "RA": 50.352,
   "dec": -13.598
@@ -1058,7 +1058,7 @@
   "object": "IBIS_wide_M490_409823",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 07:13:07.00",
+  "approx_datetime": "2024/11/01 07:13:07.00",
   "approx_airmass":       1.12690,
   "RA": 51.789,
   "dec": -14.814
@@ -1072,7 +1072,7 @@
   "object": "IBIS_wide_M490_407058",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 07:18:42.00",
+  "approx_datetime": "2024/11/01 07:18:42.00",
   "approx_airmass":       1.11476,
   "RA": 54.973,
   "dec": -14.638
@@ -1086,7 +1086,7 @@
   "object": "IBIS_wide_M490_407053",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 07:24:17.00",
+  "approx_datetime": "2024/11/01 07:24:17.00",
   "approx_airmass":       1.10861,
   "RA": 56.967,
   "dec": -14.970
@@ -1100,7 +1100,7 @@
   "object": "IBIS_wide_M490_410041",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 07:29:52.00",
+  "approx_datetime": "2024/11/01 07:29:52.00",
   "approx_airmass":       1.12500,
   "RA": 56.752,
   "dec": -14.198
@@ -1114,7 +1114,7 @@
   "object": "IBIS_wide_M490_407055",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 07:35:27.00",
+  "approx_datetime": "2024/11/01 07:35:27.00",
   "approx_airmass":       1.13714,
   "RA": 56.289,
   "dec": -14.589
@@ -1128,7 +1128,7 @@
   "object": "IBIS_wide_M490_410038",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 07:41:02.00",
+  "approx_datetime": "2024/11/01 07:41:02.00",
   "approx_airmass":       1.14962,
   "RA": 56.041,
   "dec": -14.838
@@ -1142,7 +1142,7 @@
   "object": "IBIS_wide_M490_407052",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 07:46:37.00",
+  "approx_datetime": "2024/11/01 07:46:37.00",
   "approx_airmass":       1.16772,
   "RA": 55.540,
   "dec": -14.786
@@ -1156,7 +1156,7 @@
   "object": "IBIS_wide_M490_407061",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 07:52:12.00",
+  "approx_datetime": "2024/11/01 07:52:12.00",
   "approx_airmass":       1.18401,
   "RA": 55.747,
   "dec": -14.199
@@ -1170,7 +1170,7 @@
   "object": "IBIS_wide_M490_407062",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 07:57:47.00",
+  "approx_datetime": "2024/11/01 07:57:47.00",
   "approx_airmass":       1.20045,
   "RA": 56.298,
   "dec": -13.253
@@ -1184,7 +1184,7 @@
   "object": "IBIS_wide_M490_410047",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 08:03:22.00",
+  "approx_datetime": "2024/11/01 08:03:22.00",
   "approx_airmass":       1.21747,
   "RA": 55.996,
   "dec": -13.560
@@ -1198,7 +1198,7 @@
   "object": "IBIS_wide_M490_410044",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 08:08:57.00",
+  "approx_datetime": "2024/11/01 08:08:57.00",
   "approx_airmass":       1.24064,
   "RA": 55.354,
   "dec": -13.825
@@ -1212,7 +1212,7 @@
   "object": "IBIS_wide_M490_407064",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 08:14:32.00",
+  "approx_datetime": "2024/11/01 08:14:32.00",
   "approx_airmass":       1.25970,
   "RA": 56.019,
   "dec": -12.788
@@ -1226,7 +1226,7 @@
   "object": "IBIS_wide_M490_410043",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 08:20:07.00",
+  "approx_datetime": "2024/11/01 08:20:07.00",
   "approx_airmass":       1.28091,
   "RA": 54.548,
   "dec": -14.984
@@ -1240,7 +1240,7 @@
   "object": "IBIS_wide_M490_410050",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 08:25:42.00",
+  "approx_datetime": "2024/11/01 08:25:42.00",
   "approx_airmass":       1.30727,
   "RA": 55.878,
   "dec": -12.355
@@ -1254,7 +1254,7 @@
   "object": "IBIS_wide_M490_422194",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 08:31:17.00",
+  "approx_datetime": "2024/11/01 08:31:17.00",
   "approx_airmass":       1.32874,
   "RA": 130.860,
   "dec": -5.091
@@ -1268,7 +1268,7 @@
   "object": "IBIS_wide_M490_419200",
   "expTime":       300.000,
   "filter": "M490",
-  "approx_datetime": "2024/10/30 08:36:52.00",
+  "approx_datetime": "2024/11/01 08:36:52.00",
   "approx_airmass":       1.30956,
   "RA": 132.131,
   "dec": -6.418
