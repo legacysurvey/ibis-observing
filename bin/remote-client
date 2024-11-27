@@ -1,0 +1,4 @@
+#! /bin/bash
+cd ~/obsbot
+export PYTHONPATH=~/python2.7-libs:${PYTHONPATH}
+python2.7 -u RemoteClient.py "$@"
