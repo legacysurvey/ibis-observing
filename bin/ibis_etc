@@ -1,4 +1,4 @@
 #! /bin/bash
 export PYTHONPATH=~/python-libs
 cd ~/decam-guider
-python3 -u ibis_etc.py "$@"
+python3 -u ibis_etc.py "$@" | tee -a log
