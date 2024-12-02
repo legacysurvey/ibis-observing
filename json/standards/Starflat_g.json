@@ -1,0 +1,177 @@
+[
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "+0.0", 
+  "deltaRA": "+0.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "+65.0", 
+  "deltaRA": "+100.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "-8.0", 
+  "deltaRA": "-199.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "-287.0", 
+  "deltaRA": "-94.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "+94.0", 
+  "deltaRA": "+460.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "-294.0", 
+  "deltaRA": "+150.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "+983.0", 
+  "deltaRA": "-184.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "+75.0", 
+  "deltaRA": "+707.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "-7.0", 
+  "deltaRA": "-1886.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "-1478.0", 
+  "deltaRA": "+2371.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "+867.0", 
+  "deltaRA": "-1420.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "+1637.0", 
+  "deltaRA": "+226.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "-342.0", 
+  "deltaRA": "-1995.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "-3439.0", 
+  "deltaRA": "+1253.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "+4834.0", 
+  "deltaRA": "+881.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "-3414.0", 
+  "deltaRA": "-3000.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "+3053.0", 
+  "deltaRA": "+363.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "-5340.0", 
+  "deltaRA": "+1000.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "+2849.0", 
+  "deltaRA": "-2518.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "-3273.0", 
+  "deltaRA": "+5404.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "+5287.0", 
+  "deltaRA": "+1419.0", 
+  "expTime": 30
+ },
+ {
+  "expType": "object", 
+  "object": "star flat g", 
+  "filter": "g", 
+  "deltaDEC": "-1857.0", 
+  "deltaRA": "-3028.0", 
+  "expTime": 30
+ }]

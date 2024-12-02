@@ -1,0 +1,38 @@
+[
+ {
+  "expType": "object",
+  "object": "NGC7492 M411",
+  "filter": "M411",
+  "RA": 347.112,
+  "dec": -15.5273,
+  "propid": "2023B-184194",
+  "expTime": 150
+ },
+ {
+  "expType": "object",
+  "object": "NGC7492 M411",
+  "filter": "M411",
+  "RA": 347.096,
+  "dec": -15.6939,
+  "propid": "2023B-184194",
+  "expTime": 150
+ },
+ {
+  "expType": "object",
+  "object": "NGC7492 M411",
+  "filter": "M411",
+  "RA": 346.829,
+  "dec": -15.670,
+  "propid": "2023B-184194",
+  "expTime": 150
+ },
+ {
+  "expType": "object",
+  "object": "NGC7492 M411",
+  "filter": "M411",
+  "RA": 347.316,
+  "dec": -15.545,
+  "propid": "2023B-184194",
+  "expTime": 150
+ }
+]

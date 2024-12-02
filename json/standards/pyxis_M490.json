@@ -1,0 +1,47 @@
+[
+ {
+  "expType": "object",
+  "object": "Pyxis M490",
+  "filter": "M490",
+  "RA": 136.97375,
+  "dec": -37.138056,
+  "propid": "2023B-184194",
+  "expTime": 150
+ },
+ {
+  "expType": "object",
+  "object": "Pyxis M490",
+  "filter": "M490",
+  "RA": 137.00708,
+  "dec": -37.304722,
+  "propid": "2023B-184194",
+  "expTime": 150
+ },
+ {
+  "expType": "object",
+  "object": "Pyxis M490",
+  "filter": "M490",
+  "RA": 136.69042,
+  "dec": -37.146389,
+  "propid": "2023B-184194",
+  "expTime": 150
+ },
+ {
+  "expType": "object",
+  "object": "Pyxis M490",
+  "filter": "M490",
+  "RA": 136.67375,
+  "dec": -37.313056,
+  "propid": "2023B-184194",
+  "expTime": 150
+ },
+ {
+  "expType": "object",
+  "object": "Pyxis M490",
+  "filter": "M490",
+  "RA": 137.30158,
+  "dec": -37.121389,
+  "propid": "2023B-184194",
+  "expTime": 150
+ }
+]

@@ -1,0 +1,47 @@
+[
+ {
+  "expType": "object",
+  "object": "Feige110 N4 g",
+  "filter": "g",
+  "RA": 349.99329,
+  "dec": -5.0821667,
+  "propid": "2023B-184194",
+  "expTime": 3
+ },
+ {
+  "expType": "object",
+  "object": "Feige110 N4 M438",
+  "filter": "M438",
+  "RA": 349.99329,
+  "dec": -5.0821667,
+  "propid": "2023B-184194",
+  "expTime": 12
+ },
+ {
+  "expType": "object",
+  "object": "Feige110 N4 M490",
+  "filter": "M490",
+  "RA": 349.99329,
+  "dec": -5.0821667,
+  "propid": "2023B-184194",
+  "expTime": 12
+ },
+ {
+  "expType": "object",
+  "object": "Feige110 N4 N517",
+  "filter": "M517",
+  "RA": 349.99329,
+  "dec": -5.0821667,
+  "propid": "2023B-184194",
+  "expTime": 12
+ },
+ {
+  "expType": "object",
+  "object": "Feige110 N4 g",
+  "filter": "g",
+  "RA": 349.99329,
+  "dec": -5.0821667,
+  "propid": "2023B-184194",
+  "expTime": 2
+ }
+]

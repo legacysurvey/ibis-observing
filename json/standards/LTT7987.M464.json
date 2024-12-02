@@ -1,0 +1,542 @@
+[
+ {
+  "expType": "object",
+  "object": "LTT7987 N1",
+  "filter": "M464",
+  "RA": 303.814108,
+  "dec": -30.13635,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N2",
+  "filter": "M464",
+  "RA": 303.455031,
+  "dec": -30.13635,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N3",
+  "filter": "M464",
+  "RA": 303.095953,
+  "dec": -30.13635,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N4",
+  "filter": "M464",
+  "RA": 302.736875,
+  "dec": -30.13635,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N5",
+  "filter": "M464",
+  "RA": 302.377797,
+  "dec": -30.13635,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N6",
+  "filter": "M464",
+  "RA": 302.018719,
+  "dec": -30.13635,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N7",
+  "filter": "M464",
+  "RA": 301.659642,
+  "dec": -30.13635,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N8",
+  "filter": "M464",
+  "RA": 303.633823,
+  "dec": -29.97205,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N9",
+  "filter": "M464",
+  "RA": 303.275044,
+  "dec": -29.97205,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N10",
+  "filter": "M464",
+  "RA": 302.916265,
+  "dec": -29.97205,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N11",
+  "filter": "M464",
+  "RA": 302.557485,
+  "dec": -29.97205,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N12",
+  "filter": "M464",
+  "RA": 302.198706,
+  "dec": -29.97205,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N13",
+  "filter": "M464",
+  "RA": 301.839927,
+  "dec": -29.97205,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N14",
+  "filter": "M464",
+  "RA": 303.633079,
+  "dec": -29.80775,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N15",
+  "filter": "M464",
+  "RA": 303.274597,
+  "dec": -29.80775,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N16",
+  "filter": "M464",
+  "RA": 302.916116,
+  "dec": -29.80775,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N17",
+  "filter": "M464",
+  "RA": 302.557634,
+  "dec": -29.80775,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N18",
+  "filter": "M464",
+  "RA": 302.199153,
+  "dec": -29.80775,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N19",
+  "filter": "M464",
+  "RA": 301.840671,
+  "dec": -29.80775,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N20",
+  "filter": "M464",
+  "RA": 303.453245,
+  "dec": -29.64344,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N21",
+  "filter": "M464",
+  "RA": 303.095060,
+  "dec": -29.64344,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N22",
+  "filter": "M464",
+  "RA": 302.736875,
+  "dec": -29.64344,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N23",
+  "filter": "M464",
+  "RA": 302.378690,
+  "dec": -29.64344,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N24",
+  "filter": "M464",
+  "RA": 302.020505,
+  "dec": -29.64344,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N25",
+  "filter": "M464",
+  "RA": 303.273710,
+  "dec": -29.47914,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N26",
+  "filter": "M464",
+  "RA": 302.915820,
+  "dec": -29.47914,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N27",
+  "filter": "M464",
+  "RA": 302.557930,
+  "dec": -29.47914,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N28",
+  "filter": "M464",
+  "RA": 302.200040,
+  "dec": -29.47914,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N29",
+  "filter": "M464",
+  "RA": 303.094471,
+  "dec": -29.31484,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 N31",
+  "filter": "M464",
+  "RA": 302.379279,
+  "dec": -29.31484,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S1",
+  "filter": "M464",
+  "RA": 303.815008,
+  "dec": -30.30065,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S2",
+  "filter": "M464",
+  "RA": 303.455631,
+  "dec": -30.30065,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S3",
+  "filter": "M464",
+  "RA": 303.096253,
+  "dec": -30.30065,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S4",
+  "filter": "M464",
+  "RA": 302.736875,
+  "dec": -30.30065,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S5",
+  "filter": "M464",
+  "RA": 302.377497,
+  "dec": -30.30065,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S6",
+  "filter": "M464",
+  "RA": 302.018119,
+  "dec": -30.30065,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S8",
+  "filter": "M464",
+  "RA": 303.636073,
+  "dec": -30.46495,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S9",
+  "filter": "M464",
+  "RA": 303.276394,
+  "dec": -30.46495,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S10",
+  "filter": "M464",
+  "RA": 302.916715,
+  "dec": -30.46495,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S11",
+  "filter": "M464",
+  "RA": 302.557035,
+  "dec": -30.46495,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S12",
+  "filter": "M464",
+  "RA": 302.197356,
+  "dec": -30.46495,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S13",
+  "filter": "M464",
+  "RA": 301.837677,
+  "dec": -30.46495,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S14",
+  "filter": "M464",
+  "RA": 303.636829,
+  "dec": -30.62925,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S15",
+  "filter": "M464",
+  "RA": 303.276847,
+  "dec": -30.62925,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S16",
+  "filter": "M464",
+  "RA": 302.916866,
+  "dec": -30.62925,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S17",
+  "filter": "M464",
+  "RA": 302.556884,
+  "dec": -30.62925,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S18",
+  "filter": "M464",
+  "RA": 302.196903,
+  "dec": -30.62925,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S19",
+  "filter": "M464",
+  "RA": 301.836921,
+  "dec": -30.62925,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S20",
+  "filter": "M464",
+  "RA": 303.457446,
+  "dec": -30.79356,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S21",
+  "filter": "M464",
+  "RA": 303.097160,
+  "dec": -30.79356,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S22",
+  "filter": "M464",
+  "RA": 302.736875,
+  "dec": -30.79356,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S23",
+  "filter": "M464",
+  "RA": 302.376590,
+  "dec": -30.79356,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S24",
+  "filter": "M464",
+  "RA": 302.016304,
+  "dec": -30.79356,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S25",
+  "filter": "M464",
+  "RA": 303.277761,
+  "dec": -30.95786,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S26",
+  "filter": "M464",
+  "RA": 302.917170,
+  "dec": -30.95786,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S27",
+  "filter": "M464",
+  "RA": 302.556580,
+  "dec": -30.95786,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S28",
+  "filter": "M464",
+  "RA": 302.195989,
+  "dec": -30.95786,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S29",
+  "filter": "M464",
+  "RA": 303.097772,
+  "dec": -31.12216,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S30",
+  "filter": "M464",
+  "RA": 302.736875,
+  "dec": -31.12216,
+  "propid": "2013A-9999",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "LTT7987 S31",
+  "filter": "M464",
+  "RA": 302.375978,
+  "dec": -31.12216,
+  "propid": "2013A-9999",
+  "expTime": 5
+ }
+]

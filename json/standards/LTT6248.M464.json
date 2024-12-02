@@ -1,0 +1,29 @@
+[
+ {
+  "expType": "object",
+  "object": "LTT6248 M464 N4",
+  "filter": "M464",
+  "RA": 234.74891,
+  "dec": -28.510184,
+  "propid": "2023B-184194",
+  "expTime": 10
+ },
+ {
+  "expType": "object",
+  "object": "LTT6248 M464 S4",
+  "filter": "M464",
+  "RA": 234.74891,
+  "dec": -28.674483,
+  "propid": "2023B-184194",
+  "expTime": 10
+ },
+ {
+  "expType": "object",
+  "object": "LTT6248 M464 S4",
+  "filter": "M464",
+  "RA": 234.74891,
+  "dec": -28.674483,
+  "propid": "2023B-184194",
+  "expTime": 30
+ }
+]

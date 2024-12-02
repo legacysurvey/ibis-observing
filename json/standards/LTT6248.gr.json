@@ -1,0 +1,38 @@
+[
+ {
+  "expType": "object",
+  "object": "LTT6248 g N4",
+  "filter": "g",
+  "RA": 234.74891,
+  "dec": -28.510184,
+  "propid": "2023B-184194",
+  "expTime": 4
+ },
+ {
+  "expType": "object",
+  "object": "LTT6248 g S4",
+  "filter": "g",
+  "RA": 234.74891,
+  "dec": -28.674483,
+  "propid": "2023B-184194",
+  "expTime": 4
+ },
+ {
+  "expType": "object",
+  "object": "LTT6248 r S4",
+  "filter": "r",
+  "RA": 234.74891,
+  "dec": -28.674483,
+  "propid": "2023B-184194",
+  "expTime": 4
+ },
+ {
+  "expType": "object",
+  "object": "LTT6248 r N4",
+  "filter": "r",
+  "RA": 234.74891,
+  "dec": -28.510184,
+  "propid": "2023B-184194",
+  "expTime": 4
+ }
+]
