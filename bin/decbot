@@ -1,4 +1,3 @@
 #! /bin/bash
 export PYTHONPATH=~/python-libs
-cd ~/obsbot
-python3 -u decbot.py "$@"
+python3 -u ~/obsbot/decbot.py "$@"
