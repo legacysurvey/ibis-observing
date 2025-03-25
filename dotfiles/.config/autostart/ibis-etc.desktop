@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/gnome-terminal --name Ibis-etc-terminal -t "IBIS ETC" --working-directory /home/declsp/decam-guider --geometry +1000+1000
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=IBIS ETC terminal
+Name=IBIS ETC terminal
+Comment[en_US]=
+Comment=

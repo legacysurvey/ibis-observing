@@ -3,62 +3,7 @@
 unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
 
-#exec /etc/X11/xinit/xinitrc
-#return
-
 export GNOME_SHELL_SESSION_MODE ubuntu
 export XDG_SESSION_TYPE x11
 gnome-session
 
-
-
-
-
-
-#   /etc/X11/xinit/xinitrc &
-#   
-#   echo Got here 2
-#   
-#   #/usr/bin/xfce4-session &
-#   # nope this is bad
-#   #/etc/vnc/xstartup
-#   
-#   #vncconfig -iconic &
-#   
-#   export GNOME_SHELL_SESSION_MODE ubuntu
-#   
-#   #  #export XDG_SESSION_TYPE x11
-#   #  gnome-session &
-#   
-#   export XDG_SESSION_TYPE x11
-#   dbus-launch gnome-session &
-#   
-#   
-#   
-#   
-#   #dbus-launch --exit-with-session gnome-session --session=ubuntu &
-#   
-#   #~/bin/vnc_stuff
-#   
-#   #cd $HOME/obsbot/
-#   #xterm -sb -sl 1000 -geometry +200+200 -title "COPILOT" -e python2.7 copilot.py &
-#   
-#   echo Got here 3
-#   
-#   #gnome-terminal &
-#   
-#   cd $HOME/obsbot
-#   kitty &
-#   
-#   
-#   wait
-#   
-#   #echo DISPLAY is $DISPLAY
-#   #xclock
-#   # unset DBUS_SESSION_BUS_ADDRESS
-#   # 
-#   # ~/bin/vnc_stuff
-#   # 
-#   # dbus-launch xfce4-session &
-#   # 
-#   
