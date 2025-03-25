@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/gnome-terminal --name Copilot-terminal -t Copilot --working-directory /home/declsp/obsbot --geometry 0+0
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=IBIS Copilot terminal
+Name=IBIS Copilot terminal
+Comment[en_US]=
+Comment=

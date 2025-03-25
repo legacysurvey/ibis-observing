@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/gnome-terminal --name Decbot-terminal -t Decbot --working-directory /home/declsp/obsbot --geometry +0+1000
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=IBIS Decbot terminal
+Name=IBIS Decbot terminal
+Comment[en_US]=
+Comment=
