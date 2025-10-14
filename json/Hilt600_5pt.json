@@ -1,0 +1,47 @@
+[
+ {
+  "expType": "object",
+  "object": "Hilt600 N4",
+  "filter": "M464",
+  "RA": 101.30554,
+  "dec": 2.2205833,
+  "propid": "2023B-184194",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "Hilt600 N5",
+  "filter": "M464",
+  "RA": 100.99477,
+  "dec": 2.2205833,
+  "propid": "2023B-184194",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "Hilt600 S3",
+  "filter": "M464",
+  "RA": 101.61631,
+  "dec": 2.0539167,
+  "propid": "2023B-184194",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "Hilt600 S4",
+  "filter": "M464",
+  "RA": 101.30554,
+  "dec": 2.0539167,
+  "propid": "2023B-184194",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "Hilt600 S5",
+  "filter": "M464",
+  "RA": 100.99477,
+  "dec": 2.0539167,
+  "propid": "2023B-184194",
+  "expTime": 5
+ }
+]
