@@ -2,7 +2,7 @@
  {
   "expType": "object",
   "object": "LTT7379 N4",
-  "filter": "M464",
+  "filter": "M490",
   "RA": 279.10954,
   "dec": -44.225833,
   "propid": "2023B-184194",
@@ -11,7 +11,7 @@
  {
   "expType": "object",
   "object": "LTT7379 N5",
-  "filter": "M464",
+  "filter": "M490",
   "RA": 278.67555,
   "dec": -44.225833,
   "propid": "2023B-184194",
@@ -20,7 +20,7 @@
  {
   "expType": "object",
   "object": "LTT7379 S3",
-  "filter": "M464",
+  "filter": "M490",
   "RA": 279.54353,
   "dec": -44.392500,
   "propid": "2023B-184194",
@@ -29,7 +29,7 @@
  {
   "expType": "object",
   "object": "LTT7379 S4",
-  "filter": "M464",
+  "filter": "M490",
   "RA": 279.10954,
   "dec": -44.392500,
   "propid": "2023B-184194",
@@ -38,7 +38,7 @@
  {
   "expType": "object",
   "object": "LTT7379 S5",
-  "filter": "M464",
+  "filter": "M490",
   "RA": 278.67555,
   "dec": -44.392500,
   "propid": "2023B-184194",
@@ -47,7 +47,7 @@
  {
   "expType": "object",
   "object": "LTT7987 N1",
-  "filter": "M464",
+  "filter": "M490",
   "RA": 303.814108,
   "dec": -30.13635,
   "propid": "2013A-9999",
@@ -56,7 +56,7 @@
  {
   "expType": "object",
   "object": "LTT7987 N2",
-  "filter": "M464",
+  "filter": "M490",
   "RA": 303.455031,
   "dec": -30.13635,
   "propid": "2013A-9999",
@@ -65,7 +65,7 @@
  {
   "expType": "object",
   "object": "LTT7987 N3",
-  "filter": "M464",
+  "filter": "M490",
   "RA": 303.095953,
   "dec": -30.13635,
   "propid": "2013A-9999",
@@ -74,7 +74,7 @@
  {
   "expType": "object",
   "object": "LTT7987 N4",
-  "filter": "M464",
+  "filter": "M490",
   "RA": 302.736875,
   "dec": -30.13635,
   "propid": "2013A-9999",
@@ -83,7 +83,7 @@
  {
   "expType": "object",
   "object": "LTT7987 N5",
-  "filter": "M464",
+  "filter": "M490",
   "RA": 302.377797,
   "dec": -30.13635,
   "propid": "2013A-9999",
@@ -92,7 +92,7 @@
   {
     "expType": "object",
     "object": "NGC7492 position 0",
-    "filter": "M517",
+    "filter": "M490",
     "RA": 346.82917,
     "dec": -15.545,
     "propid": "2023B-184194",
@@ -101,7 +101,7 @@
   {
     "expType": "object",
     "object": "NGC7492 position 1",
-    "filter": "M517",
+    "filter": "M490",
     "RA": 346.790119,
     "dec": -15.510526,
     "propid": "2023B-184194",
@@ -110,7 +110,7 @@
   {
     "expType": "object",
     "object": "NGC7492 position 2",
-    "filter": "M517",
+    "filter": "M490",
     "RA": 346.835721,
     "dec": -15.616892,
     "propid": "2023B-184194",
@@ -119,7 +119,7 @@
   {
     "expType": "object",
     "object": "NGC7492 position 3",
-    "filter": "M517",
+    "filter": "M490",
     "RA": 346.884972,
     "dec": -15.474848,
     "propid": "2023B-184194",
@@ -128,7 +128,7 @@
   {
     "expType": "object",
     "object": "NGC7492 position 4",
-    "filter": "M517",
+    "filter": "M490",
     "RA": 346.724843,
     "dec": -15.562753,
     "propid": "2023B-184194",
