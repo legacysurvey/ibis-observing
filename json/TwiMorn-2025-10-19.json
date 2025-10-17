@@ -1,0 +1,155 @@
+[
+  {
+    "expType": "object",
+    "object": "Pyxis position 0",
+    "filter": "M517",
+    "RA": 136.97375,
+    "dec": -37.138056,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Pyxis position 1",
+    "filter": "M517",
+    "RA": 136.926569,
+    "dec": -37.103576,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Pyxis position 2",
+    "filter": "M517",
+    "RA": 136.981672,
+    "dec": -37.209948,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Pyxis position 3",
+    "filter": "M517",
+    "RA": 137.041149,
+    "dec": -37.067892,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Pyxis position 4",
+    "filter": "M517",
+    "RA": 136.847649,
+    "dec": -37.155767,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  { 
+    "expType": "object",
+    "object": "Pyxis position 5",
+    "filter": "M517",
+    "RA": 137.094623,
+    "dec": -37.19924,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  { 
+    "expType": "object",
+    "object": "Pyxis position 6",
+    "filter": "M517",
+    "RA": 136.933108,
+    "dec": -37.017335,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+ {
+  "expType": "object",
+  "object": "LTT2415 N4",
+  "filter": "M517",
+  "RA": 89.101250,
+  "dec": -27.774667,
+  "propid": "2023B-184194",
+  "expTime": 15
+ },
+ {
+  "expType": "object",
+  "object": "LTT2415 N5",
+  "filter": "M517",
+  "RA": 88.749986,
+  "dec": -27.774667,
+  "propid": "2023B-184194",
+  "expTime": 15
+ },
+ {
+  "expType": "object",
+  "object": "LTT2415 S3",
+  "filter": "M517",
+  "RA": 89.452514,
+  "dec": -27.941333,
+  "propid": "2023B-184194",
+  "expTime": 15
+ },
+ {
+  "expType": "object",
+  "object": "LTT2415 S4",
+  "filter": "M517",
+  "RA": 89.101250,
+  "dec": -27.941333,
+  "propid": "2023B-184194",
+  "expTime": 15
+ },
+ {
+  "expType": "object",
+  "object": "LTT2415 S5",
+  "filter": "M517",
+  "RA": 88.749986,
+  "dec": -27.941333,
+  "propid": "2023B-184194",
+  "expTime": 15
+ },
+ {
+  "expType": "object",
+  "object": "Hilt600 N4",
+  "filter": "M517",
+  "RA": 101.30554,
+  "dec": 2.2205833,
+  "propid": "2023B-184194",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "Hilt600 N5",
+  "filter": "M517",
+  "RA": 100.99477,
+  "dec": 2.2205833,
+  "propid": "2023B-184194",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "Hilt600 S3",
+  "filter": "M517",
+  "RA": 101.61631,
+  "dec": 2.0539167,
+  "propid": "2023B-184194",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "Hilt600 S4",
+  "filter": "M517",
+  "RA": 101.30554,
+  "dec": 2.0539167,
+  "propid": "2023B-184194",
+  "expTime": 5
+ },
+ {
+  "expType": "object",
+  "object": "Hilt600 S5",
+  "filter": "M517",
+  "RA": 100.99477,
+  "dec": 2.0539167,
+  "propid": "2023B-184194",
+  "expTime": 5
+ }
+]
