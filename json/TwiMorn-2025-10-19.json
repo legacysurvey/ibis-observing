@@ -1,64 +1,55 @@
 [
   {
     "expType": "object",
-    "object": "Pyxis position 0",
+    "object": "Pyxis position 13",
     "filter": "M517",
-    "RA": 136.97375,
-    "dec": -37.138056,
+    "RA": 137.19929,
+    "dec": -37.17735,
     "propid": "2023B-184194",
     "expTime": 150
   },
   {
     "expType": "object",
-    "object": "Pyxis position 1",
+    "object": "Pyxis position 14",
     "filter": "M517",
-    "RA": 136.926569,
-    "dec": -37.103576,
+    "RA": 136.836279,
+    "dec": -36.981775,
     "propid": "2023B-184194",
     "expTime": 150
   },
   {
     "expType": "object",
-    "object": "Pyxis position 2",
+    "object": "Pyxis position 15",
     "filter": "M517",
-    "RA": 136.981672,
-    "dec": -37.209948,
+    "RA": 136.941806,
+    "dec": -37.334055,
     "propid": "2023B-184194",
     "expTime": 150
   },
   {
     "expType": "object",
-    "object": "Pyxis position 3",
+    "object": "Pyxis position 16",
     "filter": "M517",
-    "RA": 137.041149,
-    "dec": -37.067892,
+    "RA": 137.169203,
+    "dec": -37.006348,
     "propid": "2023B-184194",
     "expTime": 150
   },
   {
     "expType": "object",
-    "object": "Pyxis position 4",
+    "object": "Pyxis position 17",
     "filter": "M517",
-    "RA": 136.847649,
-    "dec": -37.155767,
+    "RA": 136.710069,
+    "dec": -37.12907,
     "propid": "2023B-184194",
     "expTime": 150
   },
-  { 
+  {
     "expType": "object",
-    "object": "Pyxis position 5",
+    "object": "Pyxis position 18",
     "filter": "M517",
-    "RA": 137.094623,
-    "dec": -37.19924,
-    "propid": "2023B-184194",
-    "expTime": 150
-  },
-  { 
-    "expType": "object",
-    "object": "Pyxis position 6",
-    "filter": "M517",
-    "RA": 136.933108,
-    "dec": -37.017335,
+    "RA": 137.16665,
+    "dec": -37.290619,
     "propid": "2023B-184194",
     "expTime": 150
   },

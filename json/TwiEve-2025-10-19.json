@@ -91,46 +91,82 @@
  },
   {
     "expType": "object",
-    "object": "NGC7492 position 0",
+    "object": "NGC7492 position 6",
     "filter": "M517",
-    "RA": 346.82917,
-    "dec": -15.545,
+    "RA": 346.795507,
+    "dec": -15.424283,
     "propid": "2023B-184194",
     "expTime": 150
   },
   {
     "expType": "object",
-    "object": "NGC7492 position 1",
+    "object": "NGC7492 position 7",
     "filter": "M517",
-    "RA": 346.790119,
-    "dec": -15.510526,
+    "RA": 346.76454,
+    "dec": -15.66481,
     "propid": "2023B-184194",
     "expTime": 150
   },
   {
     "expType": "object",
-    "object": "NGC7492 position 2",
+    "object": "NGC7492 position 8",
     "filter": "M517",
-    "RA": 346.835721,
-    "dec": -15.616892,
+    "RA": 346.969863,
+    "dec": -15.495442,
     "propid": "2023B-184194",
     "expTime": 150
   },
   {
     "expType": "object",
-    "object": "NGC7492 position 3",
+    "object": "NGC7492 position 9",
     "filter": "M517",
-    "RA": 346.884972,
-    "dec": -15.474848,
+    "RA": 346.682328,
+    "dec": -15.486538,
     "propid": "2023B-184194",
     "expTime": 150
   },
   {
     "expType": "object",
-    "object": "NGC7492 position 4",
+    "object": "NGC7492 position 10",
     "filter": "M517",
-    "RA": 346.724843,
-    "dec": -15.562753,
+    "RA": 346.900215,
+    "dec": -15.691151,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC7492 position 11",
+    "filter": "M517",
+    "RA": 346.881706,
+    "dec": -15.383501,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC7492 position 12",
+    "filter": "M517",
+    "RA": 346.670345,
+    "dec": -15.63358,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC7492 position 13",
+    "filter": "M517",
+    "RA": 347.015732,
+    "dec": -15.584429,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC7492 position 14",
+    "filter": "M517",
+    "RA": 346.715271,
+    "dec": -15.388769,
     "propid": "2023B-184194",
     "expTime": 150
   }

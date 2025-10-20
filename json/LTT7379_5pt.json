@@ -2,7 +2,7 @@
  {
   "expType": "object",
   "object": "LTT7379 N4",
-  "filter": "M464",
+  "filter": "M517",
   "RA": 279.10954,
   "dec": -44.225833,
   "propid": "2023B-184194",
@@ -11,7 +11,7 @@
  {
   "expType": "object",
   "object": "LTT7379 N5",
-  "filter": "M464",
+  "filter": "M517",
   "RA": 278.67555,
   "dec": -44.225833,
   "propid": "2023B-184194",
@@ -20,7 +20,7 @@
  {
   "expType": "object",
   "object": "LTT7379 S3",
-  "filter": "M464",
+  "filter": "M517",
   "RA": 279.54353,
   "dec": -44.392500,
   "propid": "2023B-184194",
@@ -29,7 +29,7 @@
  {
   "expType": "object",
   "object": "LTT7379 S4",
-  "filter": "M464",
+  "filter": "M517",
   "RA": 279.10954,
   "dec": -44.392500,
   "propid": "2023B-184194",
@@ -38,7 +38,7 @@
  {
   "expType": "object",
   "object": "LTT7379 S5",
-  "filter": "M464",
+  "filter": "M517",
   "RA": 278.67555,
   "dec": -44.392500,
   "propid": "2023B-184194",
