@@ -1,0 +1,47 @@
+[
+ {
+  "expType": "object",
+  "object": "LTT4861 N4",
+  "filter": "M464",
+  "RA": 189.71225,
+  "dec": -49.716333,
+  "propid": "2023B-184194",
+  "expTime": 15
+ },
+ {
+  "expType": "object",
+  "object": "LTT4861 N5",
+  "filter": "M464",
+  "RA": 189.23111,
+  "dec": -49.716333,
+  "propid": "2023B-184194",
+  "expTime": 15
+ },
+ {
+  "expType": "object",
+  "object": "LTT4861 S3",
+  "filter": "M464",
+  "RA": 190.19339,
+  "dec": -49.883,
+  "propid": "2023B-184194",
+  "expTime": 15
+ },
+ {
+  "expType": "object",
+  "object": "LTT4861 S4",
+  "filter": "M464",
+  "RA": 189.71225,
+  "dec": -49.883,
+  "propid": "2023B-184194",
+  "expTime": 15
+ },
+ {
+  "expType": "object",
+  "object": "LTT4861 S5",
+  "filter": "M464",
+  "RA": 189.23111,
+  "dec": -49.883,
+  "propid": "2023B-184194",
+  "expTime": 15
+ }
+]
