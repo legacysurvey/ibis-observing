@@ -1,0 +1,12 @@
+ {
+  "seqid": "1",
+  "seqnum": 0,
+  "seqtot": 1,
+  "expType": "object",
+  "propid": "2023B-184194",
+  "object": "Pointing test",
+  "expTime":      35,
+  "filter": "g",
+  "RA": 20.041,
+  "dec": -14.838
+ }
