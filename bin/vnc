@@ -1,4 +1,7 @@
 #! /bin/bash
 
+# Start up Postgres server, if necessary (for ibis_etc -> grafana plots)
+pg_ctl status || pg_ctl start
+
 vncserver -kill :1 2>/dev/null
 vncserver :1 -name "`whoami`@`hostname -s`" -geometry 1920x1080 -AlwaysShared -localhost=no

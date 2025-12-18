@@ -1,3 +1,6 @@
+# Postgres for ibis_etc / Grafana
+export PGDATA=/home/declsp/software/postgres-16/data
+
 export PS1='\u@\h:\w\n> '
 
 alias e='emacs -nw'
@@ -25,7 +28,11 @@ export DUST_DIR=~/SFD
 #export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:~/libav/lib
 #export PATH=${PATH}:~/libav/bin
 
-export PATH=${PATH}:~/postgresql-17.2/bin
+#export PATH=${PATH}:~/postgresql-17.2/bin
+export PATH=${PATH}:~/software/postgres-16/bin
+
+# for python psycopg2 library
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:~/software/postgres-16/lib
 
 export PATH=${PATH}:$HOME/python-libs/astrometry/util:$HOME/python-libs/astrometry/solver:$HOME/python-libs/astrometry/plot
 
