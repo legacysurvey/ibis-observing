@@ -1,0 +1,227 @@
+[
+  {
+    "expType": "object",
+    "object": "NGC5694 position 0",
+    "filter": "M464",
+    "RA": 219.90125,
+    "dec": -26.53889,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 1",
+    "filter": "M464",
+    "RA": 219.859202,
+    "dec": -26.504413,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 2",
+    "filter": "M464",
+    "RA": 219.908307,
+    "dec": -26.610782,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 3",
+    "filter": "M464",
+    "RA": 219.961326,
+    "dec": -26.468732,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 4",
+    "filter": "M464",
+    "RA": 219.788894,
+    "dec": -26.556623,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 5",
+    "filter": "M464",
+    "RA": 220.008927,
+    "dec": -26.600095,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 6",
+    "filter": "M464",
+    "RA": 219.865016,
+    "dec": -26.418171,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 7",
+    "filter": "M464",
+    "RA": 219.831618,
+    "dec": -26.658692,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 8",
+    "filter": "M464",
+    "RA": 220.052732,
+    "dec": -26.489297,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 9",
+    "filter": "M464",
+    "RA": 219.743153,
+    "dec": -26.480389,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 10",
+    "filter": "M464",
+    "RA": 219.977801,
+    "dec": -26.685032,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 11",
+    "filter": "M464",
+    "RA": 219.95779,
+    "dec": -26.377386,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 12",
+    "filter": "M464",
+    "RA": 219.730155,
+    "dec": -26.627425,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 13",
+    "filter": "M464",
+    "RA": 220.102188,
+    "dec": -26.578257,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 14",
+    "filter": "M464",
+    "RA": 219.778667,
+    "dec": -26.382636,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 15",
+    "filter": "M464",
+    "RA": 219.872811,
+    "dec": -26.734891,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 16",
+    "filter": "M464",
+    "RA": 220.075517,
+    "dec": -26.407237,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 17",
+    "filter": "M464",
+    "RA": 219.666281,
+    "dec": -26.530004,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 18",
+    "filter": "M464",
+    "RA": 220.07302,
+    "dec": -26.691506,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 19",
+    "filter": "M464",
+    "RA": 219.889787,
+    "dec": -26.316688,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 20",
+    "filter": "M464",
+    "RA": 219.737557,
+    "dec": -26.714019,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 21",
+    "filter": "M464",
+    "RA": 220.160241,
+    "dec": -26.507472,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 22",
+    "filter": "M464",
+    "RA": 219.681893,
+    "dec": -26.402018,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 23",
+    "filter": "M464",
+    "RA": 219.961417,
+    "dec": -26.777646,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "NGC5694 position 24",
+    "filter": "M464",
+    "RA": 220.039922,
+    "dec": -26.321911,
+    "propid": "2023B-184194",
+    "expTime": 150
+  }
+]
