@@ -1,6 +1,9 @@
 # Postgres for ibis_etc / Grafana
 export PGDATA=/home/declsp/software/postgres-16/data
 
+# Default directory for decbot and copilot to monitor
+export DECAM_DATA=/home/declsp/obsbot/rawdata
+
 export PS1='\u@\h:\w\n> '
 
 alias e='emacs -nw'
