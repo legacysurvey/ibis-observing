@@ -1,0 +1,227 @@
+[
+  {
+    "expType": "object",
+    "object": "Eridanus position 0",
+    "filter": "M464",
+    "RA": 66.185417,
+    "dec": -21.186944,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 1",
+    "filter": "M464",
+    "RA": 66.14507,
+    "dec": -21.152468,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 2",
+    "filter": "M464",
+    "RA": 66.192187,
+    "dec": -21.258836,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 3",
+    "filter": "M464",
+    "RA": 66.243067,
+    "dec": -21.116789,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 4",
+    "filter": "M464",
+    "RA": 66.077616,
+    "dec": -21.204687,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 5",
+    "filter": "M464",
+    "RA": 66.288719,
+    "dec": -21.248158,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 6",
+    "filter": "M464",
+    "RA": 66.150642,
+    "dec": -21.066226,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 7",
+    "filter": "M464",
+    "RA": 66.118622,
+    "dec": -21.30675,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 8",
+    "filter": "M464",
+    "RA": 66.330776,
+    "dec": -21.137368,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 9",
+    "filter": "M464",
+    "RA": 66.033707,
+    "dec": -21.128463,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 10",
+    "filter": "M464",
+    "RA": 66.258846,
+    "dec": -21.33309,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 11",
+    "filter": "M464",
+    "RA": 66.239684,
+    "dec": -21.025442,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 12",
+    "filter": "M464",
+    "RA": 66.021282,
+    "dec": -21.275502,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 13",
+    "filter": "M464",
+    "RA": 66.378199,
+    "dec": -21.226342,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 14",
+    "filter": "M464",
+    "RA": 66.067765,
+    "dec": -21.030702,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 15",
+    "filter": "M464",
+    "RA": 66.15814,
+    "dec": -21.382945,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 16",
+    "filter": "M464",
+    "RA": 66.352667,
+    "dec": -21.055314,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 17",
+    "filter": "M464",
+    "RA": 65.959964,
+    "dec": -21.178101,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 18",
+    "filter": "M464",
+    "RA": 66.350179,
+    "dec": -21.339583,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 19",
+    "filter": "M464",
+    "RA": 66.174414,
+    "dec": -20.964742,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 20",
+    "filter": "M464",
+    "RA": 66.02841,
+    "dec": -21.362093,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 21",
+    "filter": "M464",
+    "RA": 66.433931,
+    "dec": -21.155579,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 22",
+    "filter": "M464",
+    "RA": 65.97489,
+    "dec": -21.050109,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 23",
+    "filter": "M464",
+    "RA": 66.243119,
+    "dec": -21.425703,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "Eridanus position 24",
+    "filter": "M464",
+    "RA": 66.318528,
+    "dec": -20.96998,
+    "propid": "2023B-184194",
+    "expTime": 150
+  }
+]
