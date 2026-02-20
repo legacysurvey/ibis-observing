@@ -1,0 +1,17 @@
+[
+ {
+  "seqid": "1",
+  "seqnum": 0,
+  "seqtot": 1,
+  "expType": "object",
+  "propid": "2023B-184194",
+  "object": "pointing test",
+  "expTime":       35,
+  "efftime":       35,
+  "filter": "M490",
+  "approx_datetime": "2026/02/21 00:34:37.00",
+  "approx_airmass":       1.49927,
+  "RA": 130.120,
+  "dec": -2.072
+ }
+]
