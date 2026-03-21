@@ -1,0 +1,227 @@
+[
+  {
+    "expType": "object",
+    "object": "AM1 position 0",
+    "filter": "M464",
+    "RA": 58.759583,
+    "dec": -49.615278,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 1",
+    "filter": "M464",
+    "RA": 58.701548,
+    "dec": -49.580792,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 2",
+    "filter": "M464",
+    "RA": 58.769336,
+    "dec": -49.68717,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 3",
+    "filter": "M464",
+    "RA": 58.842467,
+    "dec": -49.545103,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 4",
+    "filter": "M464",
+    "RA": 58.604411,
+    "dec": -49.632952,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 5",
+    "filter": "M464",
+    "RA": 58.908369,
+    "dec": -49.676428,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 6",
+    "filter": "M464",
+    "RA": 58.709623,
+    "dec": -49.494553,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 7",
+    "filter": "M464",
+    "RA": 58.663301,
+    "dec": -49.735057,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 8",
+    "filter": "M464",
+    "RA": 58.968625,
+    "dec": -49.565576,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 9",
+    "filter": "M464",
+    "RA": 58.541436,
+    "dec": -49.556659,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 10",
+    "filter": "M464",
+    "RA": 58.865467,
+    "dec": -49.761392,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 11",
+    "filter": "M464",
+    "RA": 58.837505,
+    "dec": -49.453759,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 12",
+    "filter": "M464",
+    "RA": 58.523091,
+    "dec": -49.703675,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 13",
+    "filter": "M464",
+    "RA": 59.037163,
+    "dec": -49.654454,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 14",
+    "filter": "M464",
+    "RA": 58.590635,
+    "dec": -49.458953,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 15",
+    "filter": "M464",
+    "RA": 58.720224,
+    "dec": -49.811275,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 16",
+    "filter": "M464",
+    "RA": 58.999834,
+    "dec": -49.483481,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 17",
+    "filter": "M464",
+    "RA": 58.435178,
+    "dec": -49.606131,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 18",
+    "filter": "M464",
+    "RA": 58.997188,
+    "dec": -49.767755,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 19",
+    "filter": "M464",
+    "RA": 58.743797,
+    "dec": -49.393075,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 20",
+    "filter": "M464",
+    "RA": 58.533091,
+    "dec": -49.79028,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 21",
+    "filter": "M464",
+    "RA": 59.11706,
+    "dec": -49.583543,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 22",
+    "filter": "M464",
+    "RA": 58.457187,
+    "dec": -49.478179,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 23",
+    "filter": "M464",
+    "RA": 58.842896,
+    "dec": -49.854017,
+    "propid": "2023B-184194",
+    "expTime": 150
+  },
+  {
+    "expType": "object",
+    "object": "AM1 position 24",
+    "filter": "M464",
+    "RA": 58.950571,
+    "dec": -49.398208,
+    "propid": "2023B-184194",
+    "expTime": 150
+  }
+]
