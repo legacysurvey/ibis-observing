@@ -1,0 +1,43 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - {name: filename, datatype: string}
+# - {name: extension, datatype: string}
+# - {name: expnum, datatype: int64}
+# - {name: exptime, datatype: float32}
+# - {name: mjd_obs, datatype: float64}
+# - {name: airmass, datatype: float32}
+# - {name: racenter, datatype: float64}
+# - {name: deccenter, datatype: float64}
+# - {name: rabore, datatype: float64}
+# - {name: decbore, datatype: float64}
+# - {name: band, datatype: string}
+# - {name: ebv, datatype: float32}
+# - {name: zeropoint, datatype: float32}
+# - {name: transparency, datatype: float32}
+# - {name: seeing, datatype: float32}
+# - {name: sky, datatype: float32}
+# - {name: expfactor, datatype: float32}
+# - {name: camera, datatype: string}
+# - {name: dx, datatype: float32}
+# - {name: dy, datatype: float32}
+# - {name: nmatched, datatype: int64}
+# - {name: obstype, datatype: string}
+# - {name: object, datatype: string}
+# - {name: tileid, datatype: int64}
+# - {name: tileebv, datatype: float32}
+# - {name: affine_x0, datatype: float32}
+# - {name: affine_y0, datatype: float32}
+# - {name: affine_dx, datatype: float32}
+# - {name: affine_dxx, datatype: float32}
+# - {name: affine_dxy, datatype: float32}
+# - {name: affine_dy, datatype: float32}
+# - {name: affine_dyx, datatype: float32}
+# - {name: affine_dyy, datatype: float32}
+# - {name: checksum, datatype: string}
+# - {name: efftime, datatype: float32}
+# schema: astropy-2.0
+filename extension expnum exptime mjd_obs airmass racenter deccenter rabore decbore band ebv zeropoint transparency seeing sky expfactor camera dx dy nmatched obstype object tileid tileebv affine_x0 affine_y0 affine_dx affine_dxx affine_dxy affine_dy affine_dyx affine_dyy checksum efftime
+rawdata/DECam_01302818.fits.fz N4 1302818 500.0 60466.08613238 1.15 219.12477049214812 -0.5071038525610156 219.13228333333333 -0.43200000000000005 M464 0.034485247 23.60991 0.29851326 1.304391 21.528242 20.819685 decam 20.755518 43.33816 120 object IBIS_deep_desi220_M464_67 0 0.0 924.0 1948.0 0.11782342 1.0000666 0.0014307966 0.1538386 -0.0014629959 0.9997556 17097730725 24.015734
+rawdata/DECam_01302819.fits.fz N4 1302819 162.9892 60466.09227535 1.15 220.0247704476407 -0.5441038522429348 220.03228333333334 -0.46900000000000003 M411 0.03776003 20.907778 0.038184863 1.442699 21.951706 1086.0563 decam 24.376911 43.99305 24 object IBIS_deep_desi220_M411_85 0 0.0 924.0 1948.0 -0.4556543 0.99998516 0.001080934 0.015861683 -0.0015609981 1.0000613 15631575693 0.15007436
+rawdata/DECam_01302820.fits.fz N4 1302820 106.7495 60466.09491475 1.15 220.0247704476407 -0.5441038522429348 220.03228333333334 -0.46900000000000003 M464 0.03776003 19.614422 0.007529541 1.3417975 21.444948 37385.72 decam 23.14992 47.407524 12 object IBIS_deep_desi220_M464_85 0 0.0 924.0 1948.0 -0.58444446 1.0018365 0.0003096614 -0.05310801 -0.0033364042 1.0002369 15776818345 0.002855355
