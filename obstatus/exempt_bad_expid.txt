@@ -1,0 +1,2 @@
+expnum seeing efftime survey_speed comment
+1476515 0.9260475039482117 65.91617584228516 0.2785051167011261 "Automatically flagged due to wrong transparency measurement"
