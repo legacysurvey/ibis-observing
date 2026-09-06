@@ -1,21 +1,6 @@
 [
  {
   "seqid": "1",
-  "seqnum": 0,
-  "seqtot": 132,
-  "expType": "object",
-  "propid": "2025B-479281",
-  "object": "IBIS_wide_M490_437357",
-  "expTime":      800,
-  "efftime":       385.420,
-  "filter": "M490",
-  "approx_datetime": "2026/09/07 23:37:11.00",
-  "approx_airmass":       1.27585,
-  "RA": 249.221,
-  "dec": 2.388
- },
- {
-  "seqid": "1",
   "seqnum": 1,
   "seqtot": 132,
   "expType": "object",
