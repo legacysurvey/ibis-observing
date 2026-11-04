@@ -70,11 +70,14 @@ def main() -> None:
     program = footprint.program_tiles(ra, dec, DECAM_OUTER, DECAM_INSIDE) & wide
     new_ibis = np.where(wide, np.maximum(in_ibis, program.astype(int)), in_ibis)
     new_hsc = np.where(wide, ((new_ibis == 1) & ~program).astype(int), in_hsc)
-    changed = (new_ibis != in_ibis) | (new_hsc != in_hsc)
+    # Re-enabled tiles that were parked with PRIORITY 0 need a priority to be scheduled.
+    priority = np.array([float(p[col['PRIORITY']]) for p in parts])
+    revive = program & (priority == 0)
+    changed = (new_ibis != in_ibis) | (new_hsc != in_hsc) | revive
     print(f'wide tiles: {wide.sum()}; program before: {((in_ibis == 1) & (in_hsc == 0) & wide).sum()}, '
           f'after: {program.sum()}')
     print(f'  IN_IBIS 0->1: {((in_ibis == 0) & (new_ibis == 1)).sum()}; IN_HSC 1->0: {((in_hsc == 1) & (new_hsc == 0)).sum()}; '
-          f'IN_HSC 0->1: {((in_hsc == 0) & (new_hsc == 1)).sum()}')
+          f'IN_HSC 0->1: {((in_hsc == 0) & (new_hsc == 1)).sum()}; PRIORITY 0->1 for program tiles: {revive.sum()}')
     out_rows = []
     for i, (line, p) in enumerate(zip(rows, parts)):
         if changed[i]:
@@ -83,6 +86,8 @@ def main() -> None:
             nonblank = [k for k, tok in enumerate(tokens) if tok != '']
             tokens[nonblank[col['IN_IBIS']]] = str(new_ibis[i])
             tokens[nonblank[col['IN_HSC']]] = str(new_hsc[i])
+            if revive[i]:
+                tokens[nonblank[col['PRIORITY']]] = '1.0'
             line = ' '.join(tokens) + '\n'
         out_rows.append(line)
 
