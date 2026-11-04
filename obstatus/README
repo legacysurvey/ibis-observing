@@ -1,0 +1,29 @@
+Resetting git to the repository version:
+  git pull origin main --rebase
+  git pull
+
+;----------------------------------------
+; Shift the SGC footprint south 3 deg from a max field center of dec = +6
+; to a max dec = +3 deg.
+   aa = djs_read_ecsv('ibis-tiles.ecsv')
+   bb = djs_read_ecsv('ibis-tiles-extra.ecsv')
+   ramap = bb.ra
+   decmap = bb.dec
+   euler, ramap, decmap, lmap, bmap, 1
+   ebvmap = dust_getval(lmap,bmap,/interp,/noloop)
+;   qsouth = bmap LT 0 AND decmap LT 6.0 AND decmap GT -15 $
+;    AND ((bmap LT -27 AND ramap GT 270) OR (bmap LT -47 AND ramap LT 90))
+   qsouth = bmap LT 0 AND decmap LT 3.0 AND decmap GT -18 $
+    AND ((bmap LT -27 AND ramap GT 270) OR (bmap LT -47 AND ramap LT 90))
+
+
+;----------------------------------------
+; 2026-11-04: IN_IBIS/IN_HSC for the wide tiles now follow the DESI Run 2
+; imaging plan (desi_run2_imaging_plan/sample631.tex): desi2-stripes.ecsv
+; (POLU_IBIS=0 for SGC-1, which is HSC-Niji+VST only, and for the NGC-9/SGC-9
+; extensions) and footprint-regions.ecsv (HSC-Niji+VST rectangles and the two
+; dropped slivers), both copied from cfht-observing/obstatus. footprint.py
+; rasterizes the POLU+IBIS sky; update_footprint_flags.py applies it with the
+; DECam field size and moved a row of NGC-8 tiles in from the extra file so
+; coverage reaches DEC=-8.125:
+;   python update_footprint_flags.py --ngc8-row -7.65 -7.05 --ngc8-fill -8.0 -7.65

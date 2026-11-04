@@ -1,0 +1,23 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - {name: NAME, datatype: string}
+# - {name: KIND, datatype: string, description: 'niji: HSC-Niji+VST rectangle; dropped: sliver of a Niji stripe not imaged by anyone'}
+# - {name: RA_MIN, unit: deg, datatype: float64}
+# - {name: RA_MAX, unit: deg, datatype: float64}
+# - {name: DEC_MIN, unit: deg, datatype: float64}
+# - {name: DEC_MAX, unit: deg, datatype: float64}
+# - {name: NOTE, datatype: string}
+# meta: !!omap
+# - {SOURCE: 'DESI Run 2 High-z Imaging Plan, desi_run2_imaging_plan/sample631.tex (2026-11-04): Table 2 (tab:niji_stripes) and the text of Section 3 on the dropped slivers'}
+# - {DESCRIPTION: 'Areas inside the stripes of desi2-stripes.ecsv that are NOT imaged by POLU+IBIS. Everything else inside a stripe with POLU_IBIS=1 is CFHT+DECam sky.'}
+# schema: astropy-2.0
+NAME KIND RA_MIN RA_MAX DEC_MIN DEC_MAX NOTE
+NGC-5 niji 128.0 226.0 0.68 3.48 "unique 2.8-deg band within HSC-SSP Wide"
+NGC-6 niji 128.0 226.0 -2.12 0.68 "unique 2.8-deg band within HSC-SSP Wide"
+SGC-1 niji 330.2 39.7 1.89 4.69 "unique 2.8-deg band within HSC-SSP Wide"
+SGC-2 niji 330.2 39.7 -0.91 1.89 "unique 2.8-deg band within HSC-SSP Wide"
+SGC-3 niji 28.7 39.7 -3.71 -0.91 "HSC-SSP Wide area south of SGC-2"
+SGC-4 niji 28.7 39.7 -6.51 -3.71 "HSC-SSP Wide area south of SGC-2"
+NGC-5-west dropped 126.60 128.0 0.375 3.875 "sliver west of HSC-SSP Wide, dropped from the footprint"
+NGC-6-east dropped 226.0 228.30 -2.375 1.125 "sliver east of HSC-SSP Wide, dropped from the footprint"
