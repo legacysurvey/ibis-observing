@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """Set IN_IBIS/IN_HSC for the IBIS wide tiles from the DESI Run 2 imaging plan.
 
-A wide tile is a DECam program tile when its center lies within the DECam
-half-field (1.05 x 0.95 deg) of POLU+IBIS sky and its field does not lie
-entirely inside an HSC-Niji+VST rectangle (footprint.py; the stripe and
-region tables are copies of the ones in cfht-observing/obstatus, derived from
-desi_run2_imaging_plan/sample631.tex). Program tiles get IN_IBIS=1, IN_HSC=0;
-tiles that were IN_IBIS=1 but are not program tiles get IN_HSC=1; other rows
-are untouched. With --ngc8-row, wide tiles from ibis-tiles-extra.ecsv whose
+A wide tile is in the imaged footprint (IN_IBIS=1) when its DECam field
+(2.1 x 1.9 deg) overlaps POLU+IBIS sky or an HSC-Niji+VST rectangle, and is
+a DECam program tile (IN_IBIS=1, IN_HSC=0) when its field overlaps POLU+IBIS
+sky and does not lie entirely inside a Niji rectangle; IN_HSC=1 therefore
+marks footprint tiles whose sky is HSC-Niji+VST's alone (footprint.py; the
+stripe and region tables are copies of the ones in cfht-observing/obstatus,
+derived from desi_run2_imaging_plan/sample631.tex). Deep tiles are untouched. With --ngc8-row, wide tiles from ibis-tiles-extra.ecsv whose
 centers fall in the given DEC range inside NGC-8 are moved into the catalog
 (PRIORITY 1, EFFTIME_GOAL recomputed with the current coefficients) so that
 coverage reaches the stripe's southern bound. Edits are line-based so that
@@ -68,16 +68,18 @@ def main() -> None:
     ra = np.array([float(p[col['RA']]) for p in parts]); dec = np.array([float(p[col['DEC']]) for p in parts])
     in_ibis = np.array([int(float(p[col['IN_IBIS']])) for p in parts]); in_hsc = np.array([int(float(p[col['IN_HSC']])) for p in parts])
     program = footprint.program_tiles(ra, dec, DECAM_OUTER, DECAM_INSIDE) & wide
-    new_ibis = np.where(wide, np.maximum(in_ibis, program.astype(int)), in_ibis)
-    new_hsc = np.where(wide, ((new_ibis == 1) & ~program).astype(int), in_hsc)
+    in_footprint = footprint.in_footprint(ra, dec, DECAM_OUTER) & wide
+    new_ibis = np.where(wide, in_footprint.astype(int), in_ibis)
+    new_hsc = np.where(wide, (in_footprint & ~program).astype(int), in_hsc)
     # Re-enabled tiles that were parked with PRIORITY 0 need a priority to be scheduled.
     priority = np.array([float(p[col['PRIORITY']]) for p in parts])
     revive = program & (priority == 0)
     changed = (new_ibis != in_ibis) | (new_hsc != in_hsc) | revive
     print(f'wide tiles: {wide.sum()}; program before: {((in_ibis == 1) & (in_hsc == 0) & wide).sum()}, '
           f'after: {program.sum()}')
-    print(f'  IN_IBIS 0->1: {((in_ibis == 0) & (new_ibis == 1)).sum()}; IN_HSC 1->0: {((in_hsc == 1) & (new_hsc == 0)).sum()}; '
-          f'IN_HSC 0->1: {((in_hsc == 0) & (new_hsc == 1)).sum()}; PRIORITY 0->1 for program tiles: {revive.sum()}')
+    print(f'  IN_IBIS 0->1: {((in_ibis == 0) & (new_ibis == 1)).sum()}, 1->0: {((in_ibis == 1) & (new_ibis == 0)).sum()}; '
+          f'IN_HSC 1->0: {((in_hsc == 1) & (new_hsc == 0)).sum()}, 0->1: {((in_hsc == 0) & (new_hsc == 1)).sum()}; '
+          f'PRIORITY 0->1 for program tiles: {revive.sum()}')
     out_rows = []
     for i, (line, p) in enumerate(zip(rows, parts)):
         if changed[i]:
