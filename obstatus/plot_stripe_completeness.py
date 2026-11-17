@@ -10,7 +10,8 @@ The HSC-Niji+VST rectangles are drawn in grey: there is no status file for them 
 
 Program tiles are those with IN_IBIS=1 and IN_HSC=0 (DECam: wide tiles only),
 as in stripe_completeness.py.  The stripes are outlined by their unique
-2.8-deg declination bands and labelled.
+2.8-deg declination bands and labelled.  The number at the right-hand end of
+each stripe is the mean of the map over that band (where there are program tiles).
 
   python plot_stripe_completeness.py --cfht-tiles ~/cfht-observing/obstatus/cfht-tiles.ecsv
 """
@@ -26,7 +27,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_CFHT = os.path.join(HERE, '..', '..', 'cfht-observing', 'obstatus', 'cfht-tiles.ecsv')
 CELL = 0.1
 # plotting windows in x (= RA for the NGC, RA wrapped to +-180 for the SGC) and Dec
-CAPS = {'NGC': dict(x=(112.0, 270.0), dec=(-9.5, 16.5)), 'SGC': dict(x=(-64.0, 74.0), dec=(-19.5, 6.5))}
+CAPS = {'NGC': dict(x=(108.0, 270.0), dec=(-9.5, 16.5)), 'SGC': dict(x=(-68.0, 74.0), dec=(-19.5, 6.5))}
 HALF = {'CFHT': (0.5, 0.5), 'DECam': (1.05, 0.95)}     # field half-sizes (RA on the sky, Dec), as footprint.py
 BANDS = [('MB1', 'M4112', 'M411'), ('MB2', 'M4376', 'M438'), ('MB3', None, 'M464'), ('MB4', None, 'M490'), ('MB5', None, 'M517')]
 CMAP = LinearSegmentedColormap.from_list('completeness', ['#dfe9f5', '#9dbfe3', '#4f8fcf', '#1f5fae', '#0b2f6b'])
@@ -117,6 +118,12 @@ def main():
                 xa, xb = rect_x(s['RA_MIN'], s['RA_MAX'], cap)
                 ax.add_patch(Rectangle((xa, s['DEC_CENTER'] - 1.4), xb - xa, 2.8, fc='none', ec=INK, lw=0.5, zorder=3))
                 ax.text(x1 - 1.0, s['DEC_CENTER'], s['STRIPE'], ha='left', va='center', fontsize=6.5, color=INK, zorder=4)
+                # mean of the map over the stripe's unique band (the part with program tiles)
+                ny, nx = plan.shape
+                xc = x0 + (np.arange(nx) + 0.5) * CELL; dc = d0 + (np.arange(ny) + 0.5) * CELL
+                inside = ((dc > s['DEC_CENTER'] - 1.4) & (dc < s['DEC_CENTER'] + 1.4))[:, None] & ((xc > xa) & (xc < xb))[None, :] & (plan > 0)
+                if inside.any() and s['POLU_IBIS'] == 1:     # no number for a stripe CFHT/DECam do not image
+                    ax.text(x0 + 1.0, s['DEC_CENTER'], '%.0f%%' % (100 * frac[inside].mean()), ha='right', va='center', fontsize=6.5, color=INK, zorder=4)
             ax.set_xlim(x1, x0); ax.set_ylim(d0, d1)          # RA increasing to the left
             ticks = np.arange(np.ceil(x0 / 20) * 20, x1, 20)
             ax.set_xticks(ticks); ax.set_xticklabels(['%d' % (v % 360) for v in ticks])
