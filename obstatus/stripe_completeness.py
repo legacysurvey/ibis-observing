@@ -16,20 +16,14 @@ CFHT and DECam; the stripes with an HSC-Niji+VST rectangle in
 footprint-regions.ecsv for HSC and VST).  Tiles that spill over a stripe edge
 are therefore counted once, in the stripe holding their centre.
 
-The possible extensions NGC-9 and SGC-9 are not in the program; for them every
-tile whose field overlaps the stripe is counted as planned (DECam: from
-ibis-tiles-extra.ecsv too).  --no-extended leaves them out.
-
   python stripe_completeness.py
   python stripe_completeness.py --cfht-tiles ~/cfht-observing/obstatus/cfht-tiles.ecsv --markdown
 """
 import argparse, os, sys
 import numpy as np
-from astropy.table import Table, vstack
+from astropy.table import Table
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, HERE)
-from footprint import Footprint, MEGACAM_OUTER, DECAM_OUTER
 DEFAULT_CFHT = os.path.join(HERE, '..', '..', 'cfht-observing', 'obstatus', 'cfht-tiles.ecsv')
 
 
@@ -76,27 +70,19 @@ def main():
     p.add_argument('--vst-tiles', help='VST tiling table (ra, dec[, done])')
     p.add_argument('--stripes', default=os.path.join(HERE, 'desi2-stripes.ecsv'))
     p.add_argument('--regions', default=os.path.join(HERE, 'footprint-regions.ecsv'))
-    p.add_argument('--ibis-extra', default=os.path.join(HERE, 'ibis-tiles-extra.ecsv'))
-    p.add_argument('--no-extended', action='store_true', help='leave out the NGC-9 and SGC-9 extensions')
     p.add_argument('--markdown', action='store_true', help='print a Markdown table')
     p.add_argument('--out', help='also write the table to this file')
     a = p.parse_args()
 
     st = Table.read(a.stripes); rg = Table.read(a.regions)
-    ext = np.array([str(n) == 'extended' for n in st['NOTE']]) & (not a.no_extended)
-    polu = st[(np.asarray(st['POLU_IBIS']) == 1) | ext]
-    extfp = Footprint([(s['RA_MIN'], s['RA_MAX'], s['DEC_MIN'], s['DEC_MAX']) for s in st[ext]], [], [])
-
-    def in_ext(t, half):         # tiles whose field overlaps an extension stripe
-        if not ext.any(): return np.zeros(len(t), bool)
-        return extfp.near_polu(np.asarray(t['RA'], float), np.asarray(t['DEC'], float), half)
+    polu = st[st['POLU_IBIS'] == 1]
     niji_names = [n for n in st['STRIPE'] if n in set(rg['NAME'][rg['KIND'] == 'niji'])]
     niji = st[[n in niji_names for n in st['STRIPE']]]
 
     cols = []          # (header, {stripe: (done, total)}, has status)
     if os.path.exists(a.cfht_tiles):
         t = Table.read(a.cfht_tiles)
-        prog = ((np.asarray(t['IN_IBIS']) == 1) & (np.asarray(t['IN_HSC']) == 0)) | in_ext(t, MEGACAM_OUTER)
+        prog = (np.asarray(t['IN_IBIS']) == 1) & (np.asarray(t['IN_HSC']) == 0)
         stripe = assign_stripes(t['RA'], t['DEC'], polu['STRIPE'], polu['DEC_CENTER'])
         done = np.asarray(t['DONE']) > 0
         for f in sorted(set(t['FILTER'])):
@@ -104,11 +90,8 @@ def main():
     else:
         print('No CFHT tile file at %s (use --cfht-tiles)' % a.cfht_tiles, file=sys.stderr)
     t = Table.read(a.ibis_tiles)
-    if ext.any() and os.path.exists(a.ibis_extra):
-        e = Table.read(a.ibis_extra)
-        t = vstack([t, e[in_ext(e, DECAM_OUTER)][t.colnames]], metadata_conflicts='silent')
     wide = np.array([o.startswith('IBIS_wide') for o in t['OBJECT']])
-    prog = wide & (((np.asarray(t['IN_IBIS']) == 1) & (np.asarray(t['IN_HSC']) == 0)) | in_ext(t, DECAM_OUTER))
+    prog = wide & (np.asarray(t['IN_IBIS']) == 1) & (np.asarray(t['IN_HSC']) == 0)
     stripe = assign_stripes(t['RA'], t['DEC'], polu['STRIPE'], polu['DEC_CENTER'])
     done = np.asarray(t['DONE']) > 0
     for f in sorted(set(t['FILTER'])):

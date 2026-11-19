@@ -22,7 +22,7 @@
 # - {SURVEYS_NOTE: 'The printed Surveys entries are split into YEAR, SURVEYS, and parenthetical NOTE.'}
 # - {RA_NOTE: 'SGC RA_MIN > RA_MAX denotes a range crossing 360/0 degrees.'}
 # - {AREA_NOTE: 'Declination ranges overlap adjacent stripes; areas are for a unique declination width of 2.8 degrees.'}
-# - {NGC9_NOTE: 'NGC-9 is a proposed additional stripe requiring additional imaging.'}
+# - {NGC9_NOTE: 'NGC-9 and SGC-9, formerly proposed extensions, are part of the baseline footprint as of 2026-11-19 (delivered last, Y5).'}
 # - {SGC1_NOTE: 'SGC-1 relies on HSC-Niji imaging and is outside the Rubin footprint.'}
 # schema: astropy-2.0
 STRIPE DEC_CENTER RA_MIN RA_MAX DEC_MIN DEC_MAX AREA_DEG2 YEAR SURVEYS NOTE POLU_IBIS
@@ -34,7 +34,7 @@ NGC-5 2.08 126.60 249.93 0.375 3.875 345 Y4 Niji+VST "" 1
 NGC-6 -0.72 128.16 228.30 -2.375 1.125 280 Y3 Niji+VST "" 1
 NGC-7 -3.52 129.81 225.58 -5.375 -1.625 268 Y1 POLU+IBIS "" 1
 NGC-8 -6.32 131.56 222.41 -8.125 -4.625 253 Y1 POLU+IBIS "" 1
-NGC-9 -9.12 133.43 218.59 -10.875 -7.375 235 Y5 POLU+IBIS extended 0
+NGC-9 -9.12 133.43 218.59 -10.875 -7.375 235 Y5 POLU+IBIS "" 1
 SGC-1 3.29 315.57 44.37 1.625 5.125 248 Y4 Niji+VST "outside LSST; HSC-Niji+VST only, no CFHT/DECam imaging" 0
 SGC-2 0.49 313.82 47.15 -1.375 2.375 261 Y3 Niji+VST "" 1
 SGC-3 -2.31 312.19 49.56 -4.125 -0.625 272 Y3 POLU+IBIS "" 1
@@ -43,4 +43,4 @@ SGC-5 -7.91 309.21 53.53 -9.625 -6.125 289 Y2 POLU+IBIS "" 1
 SGC-6 -10.71 307.84 55.18 -12.375 -8.875 295 Y1 POLU+IBIS "" 1
 SGC-7 -13.51 306.53 56.64 -15.375 -11.625 300 Y1 POLU+IBIS "" 1
 SGC-8 -16.31 305.29 57.93 -18.125 -14.625 303 Y4 POLU+IBIS "" 1
-SGC-9 -19.11 304.10 59.06 -20.875 -17.375 304 Y5 POLU+IBIS extended 0
+SGC-9 -19.11 304.10 59.06 -20.875 -17.375 304 Y5 POLU+IBIS "" 1

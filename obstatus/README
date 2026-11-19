@@ -27,3 +27,11 @@ Resetting git to the repository version:
 ; DECam field size and moved a row of NGC-8 tiles in from the extra file so
 ; coverage reaches DEC=-8.125:
 ;   python update_footprint_flags.py --ngc8-row -7.65 -7.05 --ngc8-fill -8.0 -7.65
+
+
+;----------------------------------------
+; 2026-11-19: NGC-9 and SGC-9 are baseline stripes (POLU_IBIS=1 in
+; desi2-stripes.ecsv; no longer "extended").  Their wide tiles (1914 per
+; filter) were moved in from ibis-tiles-extra.ecsv at PRIORITY 0.1:
+;   python update_footprint_flags.py --add-stripes NGC-9 SGC-9 --add-priority 0.1
+; SGC-1 remains outside the DECam program (a "bonus" HSC-Niji+VST region).

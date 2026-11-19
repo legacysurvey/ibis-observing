@@ -9,25 +9,21 @@ M411/M438 exposures are added to the CFHT fraction of MB1/MB2 (clipped at 1).
 The HSC-Niji+VST rectangles are drawn in grey: there is no status file for them yet.
 
 Program tiles are those with IN_IBIS=1 and IN_HSC=0 (DECam: wide tiles only),
-as in stripe_completeness.py.  The possible extensions NGC-9 and SGC-9 are not
-in the program, so for them every tile whose field overlaps the stripe is taken
-as planned (DECam: from ibis-tiles-extra.ecsv too); --no-extended leaves them out.  The stripes are outlined by their unique
+as in stripe_completeness.py.  The stripes are outlined by their unique
 2.8-deg declination bands and labelled.  The number at the right-hand end of
 each stripe is the mean of the map over that band (where there are program tiles).
 
   python plot_stripe_completeness.py --cfht-tiles ~/cfht-observing/obstatus/cfht-tiles.ecsv
 """
-import argparse, os, sys
+import argparse, os
 import numpy as np
 import matplotlib; matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.patches import Rectangle, Patch
-from astropy.table import Table, vstack
+from astropy.table import Table
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, HERE)
-from footprint import Footprint
 DEFAULT_CFHT = os.path.join(HERE, '..', '..', 'cfht-observing', 'obstatus', 'cfht-tiles.ecsv')
 CELL = 0.1
 # plotting windows in x (= RA for the NGC, RA wrapped to +-180 for the SGC) and Dec
@@ -74,33 +70,18 @@ def main():
     p.add_argument('--cfht-tiles', default=DEFAULT_CFHT)
     p.add_argument('--stripes', default=os.path.join(HERE, 'desi2-stripes.ecsv'))
     p.add_argument('--regions', default=os.path.join(HERE, 'footprint-regions.ecsv'))
-    p.add_argument('--ibis-extra', default=os.path.join(HERE, 'ibis-tiles-extra.ecsv'))
-    p.add_argument('--no-extended', action='store_true', help='leave out the NGC-9 and SGC-9 extensions')
     p.add_argument('-o', '--out', default=os.path.join(HERE, 'stripe-completeness.pdf'))
     a = p.parse_args()
 
-    st = Table.read(a.stripes); ext = np.array([str(n) == 'extended' for n in st['NOTE']])
-    extfp = Footprint([(s['RA_MIN'], s['RA_MAX'], s['DEC_MIN'], s['DEC_MAX']) for s in st[ext]], [], [])
-    if a.no_extended:
-        st = st[~ext]
-    shown = np.array([s['POLU_IBIS'] == 1 or str(s['NOTE']) == 'extended' for s in st])
-
-    def in_ext(t, cam):          # tiles whose field overlaps an extension stripe
-        if a.no_extended: return np.zeros(len(t), bool)
-        return extfp.near_polu(np.asarray(t['RA'], float), np.asarray(t['DEC'], float), HALF[cam])
+    st = Table.read(a.stripes)
     rg = Table.read(a.regions); rg = rg[rg['KIND'] == 'niji']
     tiles = {}
     t = Table.read(a.ibis_tiles)
-    wide = np.array([o.startswith('IBIS_wide') for o in t['OBJECT']])
-    sel = wide & (((np.asarray(t['IN_IBIS']) == 1) & (np.asarray(t['IN_HSC']) == 0)) | in_ext(t, 'DECam'))
+    sel = np.array([o.startswith('IBIS_wide') for o in t['OBJECT']]) & (np.asarray(t['IN_IBIS']) == 1) & (np.asarray(t['IN_HSC']) == 0)
     tiles['DECam'] = t[sel]
-    if not a.no_extended and os.path.exists(a.ibis_extra):
-        e = Table.read(a.ibis_extra)
-        e = e[np.array([o.startswith('IBIS_wide') for o in e['OBJECT']]) & in_ext(e, 'DECam')]
-        tiles['DECam'] = vstack([tiles['DECam'], e[tiles['DECam'].colnames]], metadata_conflicts='silent')
     if os.path.exists(a.cfht_tiles):
         t = Table.read(a.cfht_tiles)
-        tiles['CFHT'] = t[((np.asarray(t['IN_IBIS']) == 1) & (np.asarray(t['IN_HSC']) == 0)) | in_ext(t, 'CFHT')]
+        tiles['CFHT'] = t[(np.asarray(t['IN_IBIS']) == 1) & (np.asarray(t['IN_HSC']) == 0)]
     else:
         print('No CFHT tile file at %s: MB1/MB2 show DECam only' % a.cfht_tiles)
 
@@ -132,7 +113,7 @@ def main():
                     ax.add_patch(Rectangle((xa, r['DEC_MIN']), xb - xa, r['DEC_MAX'] - r['DEC_MIN'], fc=NIJI_GREY, ec='none', zorder=1))
             im = ax.imshow(np.ma.masked_where(plan == 0, frac), origin='lower', extent=(x0, x1, d0, d1), cmap=CMAP, vmin=0, vmax=1,
                            aspect='auto', interpolation='nearest', zorder=2)
-            for s, show in zip(st, shown):     # stripe outlines and labels
+            for s in st:                       # stripe outlines and labels
                 if not s['STRIPE'].startswith(cap): continue
                 xa, xb = rect_x(s['RA_MIN'], s['RA_MAX'], cap)
                 ax.add_patch(Rectangle((xa, s['DEC_CENTER'] - 1.4), xb - xa, 2.8, fc='none', ec=INK, lw=0.5, zorder=3))
@@ -141,7 +122,7 @@ def main():
                 ny, nx = plan.shape
                 xc = x0 + (np.arange(nx) + 0.5) * CELL; dc = d0 + (np.arange(ny) + 0.5) * CELL
                 inside = ((dc > s['DEC_CENTER'] - 1.4) & (dc < s['DEC_CENTER'] + 1.4))[:, None] & ((xc > xa) & (xc < xb))[None, :] & (plan > 0)
-                if inside.any() and show:     # no number for a stripe CFHT/DECam do not image
+                if inside.any() and s['POLU_IBIS'] == 1:     # no number for a stripe CFHT/DECam do not image
                     ax.text(x0 + 1.0, s['DEC_CENTER'], '%.0f%%' % (100 * frac[inside].mean()), ha='right', va='center', fontsize=6.5, color=INK, zorder=4)
             ax.set_xlim(x1, x0); ax.set_ylim(d0, d1)          # RA increasing to the left
             ticks = np.arange(np.ceil(x0 / 20) * 20, x1, 20)
