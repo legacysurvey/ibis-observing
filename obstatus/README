@@ -35,3 +35,12 @@ Resetting git to the repository version:
 ; filter) were moved in from ibis-tiles-extra.ecsv at PRIORITY 0.1:
 ;   python update_footprint_flags.py --add-stripes NGC-9 SGC-9 --add-priority 0.1
 ; SGC-1 remains outside the DECam program (a "bonus" HSC-Niji+VST region).
+
+
+;----------------------------------------
+; 2026-11-20: SGC-1 is tabulated in desi2-stripes.ecsv at the RA range of its
+; HSC-SSP Wide imaging (330.2 to 39.7, 194 sq deg); DECam does not image it,
+; and it has no ends beyond the HSC imaging.  No tile flags changed: the wide
+; tiles centred in the SGC-1 band at RA < 330.2 or > 39.7 that are program
+; tiles (66 per filter, DEC < 3.3) are edge tiles of SGC-2, whose padded
+; bounds reach DEC +2.375.
