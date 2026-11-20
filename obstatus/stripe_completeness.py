@@ -6,8 +6,14 @@ tiles marked DONE in the tile files over the number of program tiles.
 
   DECam (IBIS): ibis-tiles.ecsv, wide tiles (OBJECT IBIS_wide_*) with IN_IBIS=1, IN_HSC=0
   CFHT  (POLU): cfht-tiles.ecsv, tiles with IN_IBIS=1, IN_HSC=0
-  HSC   (Niji): optional tiling table (--hsc-tiles) with ra, dec and, once it
-                exists, a done column; VST can be added the same way (--vst-tiles)
+  HSC   (Niji): survey_status.csv of the Niji wide-observing-strategy repository
+                (--niji-repo): one row per shot, done = USABLE (or USABLE_LOOSE with
+                --niji-loose).  Each shot is one exposure through the MBQ1 quadrant
+                filter, i.e. about a quarter of the field in each of 413/439/465/490,
+                so one column serves the four filters.  Only shots centred within
+                0.75 deg of an HSC-Niji+VST rectangle of footprint-regions.ecsv count.
+                VST (the fifth band there) can be added with --vst-tiles once a
+                table with ra, dec and done exists.
 
 Each tile is assigned to exactly one stripe: the stripe in its Galactic cap
 (NGC: 90 < RA < 270) whose central declination is nearest to the tile centre,
@@ -19,11 +25,12 @@ are therefore counted once, in the stripe holding their centre.
   python stripe_completeness.py
   python stripe_completeness.py --cfht-tiles ~/cfht-observing/obstatus/cfht-tiles.ecsv --markdown
 """
-import argparse, os, sys
+import argparse, csv, os, sys
 import numpy as np
 from astropy.table import Table
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+DEFAULT_NIJI = os.path.join(os.path.expanduser('~'), 'Imaging', 'wide-observing-strategy')
 DEFAULT_CFHT = os.path.join(HERE, '..', '..', 'cfht-observing', 'obstatus', 'cfht-tiles.ecsv')
 
 
@@ -66,6 +73,8 @@ def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument('--ibis-tiles', default=os.path.join(HERE, 'ibis-tiles.ecsv'))
     p.add_argument('--cfht-tiles', default=DEFAULT_CFHT)
+    p.add_argument('--niji-repo', default=DEFAULT_NIJI, help='clone of hsc-niji-survey/wide-observing-strategy')
+    p.add_argument('--niji-loose', action='store_true', help='count HSC shots usable with the loose seeing limit')
     p.add_argument('--hsc-tiles', help='HSC-Niji tiling table (ra, dec[, done])')
     p.add_argument('--vst-tiles', help='VST tiling table (ra, dec[, done])')
     p.add_argument('--stripes', default=os.path.join(HERE, 'desi2-stripes.ecsv'))
@@ -96,6 +105,17 @@ def main():
     done = np.asarray(t['DONE']) > 0
     for f in sorted(set(t['FILTER'])):
         cols.append(('DECam ' + f, count(stripe, done, prog & (np.asarray(t['FILTER']) == f)), True))
+    status = os.path.join(a.niji_repo, 'survey_status.csv')
+    if os.path.exists(status) and not a.hsc_tiles:
+        rows = list(csv.DictReader(open(status)))
+        ra = np.array([float(r['RA']) for r in rows]); dec = np.array([float(r['DEC']) for r in rows])
+        done = np.array([r['USABLE_LOOSE' if a.niji_loose else 'USABLE'] == '1' for r in rows])
+        near = np.zeros(len(ra), bool)
+        for r in rg[rg['KIND'] == 'niji']:
+            pad = 0.75 / np.cos(np.radians(dec)); w = (r['RA_MAX'] - r['RA_MIN']) % 360
+            near |= (dec > r['DEC_MIN'] - 0.75) & (dec < r['DEC_MAX'] + 0.75) & (((ra - r['RA_MIN'] + pad) % 360) < w + 2 * pad)
+        stripe = assign_stripes(ra, dec, niji['STRIPE'], niji['DEC_CENTER'])
+        cols.append(('HSC MBQ1 shots', count(stripe, done, near), True))
     for label, path in (('HSC', a.hsc_tiles), ('VST', a.vst_tiles)):
         if path:
             ra, dec, done, has = read_generic(path)

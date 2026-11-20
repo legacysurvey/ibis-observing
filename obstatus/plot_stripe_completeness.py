@@ -6,7 +6,13 @@ covering it), from 0 (nothing observed) to 1 (every planned exposure of that
 point taken).  The five rows are the bands MB1-MB5; the columns are the NGC and
 SGC.  CFHT images MB1-MB2 and DECam MB3-MB5 in the POLU+IBIS sky; the DECam
 M411/M438 exposures are added to the CFHT fraction of MB1/MB2 (clipped at 1).
-The HSC-Niji+VST rectangles are drawn in grey: there is no status file for them yet.
+Inside the HSC-Niji+VST rectangles MB1-MB4 show HSC-Niji: every exposure is taken
+through the MBQ1 quadrant filter, so each of the four filters (413, 439, 465, 490)
+sees about a quarter of the focal plane.  The map is (throughput-weighted usable
+shots) / (throughput-weighted planned shots) in that filter, from the survey
+status table and the per-filter throughput maps of the Niji
+wide-observing-strategy repository (--niji-repo).  MB5 there will come from VST,
+which has no status yet, and is drawn in grey.
 
 Program tiles are those with IN_IBIS=1 and IN_HSC=0 (DECam: wide tiles only),
 as in stripe_completeness.py.  The stripes are outlined by their unique
@@ -15,7 +21,7 @@ each stripe is the mean of the map over that band (where there are program tiles
 
   python plot_stripe_completeness.py --cfht-tiles ~/cfht-observing/obstatus/cfht-tiles.ecsv
 """
-import argparse, os
+import argparse, csv, os
 import numpy as np
 import matplotlib; matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -29,7 +35,10 @@ CELL = 0.1
 # plotting windows in x (= RA for the NGC, RA wrapped to +-180 for the SGC) and Dec
 CAPS = {'NGC': dict(x=(108.0, 270.0), dec=(-12.0, 16.5)), 'SGC': dict(x=(-68.0, 74.0), dec=(-22.0, 6.5))}
 HALF = {'CFHT': (0.5, 0.5), 'DECam': (1.05, 0.95)}     # field half-sizes (RA on the sky, Dec), as footprint.py
-BANDS = [('MB1', 'M4112', 'M411'), ('MB2', 'M4376', 'M438'), ('MB3', None, 'M464'), ('MB4', None, 'M490'), ('MB5', None, 'M517')]
+BANDS = [('MB1', 'M4112', 'M411', '413'), ('MB2', 'M4376', 'M438', '439'), ('MB3', None, 'M464', '465'), ('MB4', None, 'M490', '490'),
+         ('MB5', None, 'M517', None)]       # band, CFHT filter, DECam filter, HSC MBQ1 sub-filter
+DEFAULT_NIJI = os.path.join(os.path.expanduser('~'), 'Imaging', 'wide-observing-strategy')
+NIJI_MIN_PLAN = 0.5                  # effective planned exposures below which a cell is not drawn for HSC
 CMAP = LinearSegmentedColormap.from_list('completeness', ['#dfe9f5', '#9dbfe3', '#4f8fcf', '#1f5fae', '#0b2f6b'])
 NIJI_GREY = '#d9d9d9'; INK = '#333333'
 
@@ -58,6 +67,57 @@ def raster(ra, dec, half, cap):
     return g
 
 
+class Niji:
+    """HSC-Niji planned and usable coverage per MBQ1 sub-filter, on the cap grids.
+
+    The coverage of a sky point by one shot is the relative throughput of the
+    sub-filter at the point's position in the focal plane (the map file written
+    by skytiling's flats_to_throughput; ROT follows skytiling's convention).
+    """
+
+    def __init__(self, repo, usable_column='USABLE', throughput=None):
+        from astropy.io import fits
+        self.status = os.path.join(repo, 'survey_status.csv')
+        thru = throughput or os.path.join(repo, 'wide_dithering', 'hsc_mbq1_throughput_8p18_ccd44dead.fits')
+        rows = list(csv.DictReader(open(self.status)))
+        self.ra = np.array([float(r['RA']) for r in rows]); self.dec = np.array([float(r['DEC']) for r in rows])
+        self.rot = np.radians([float(r['ROT']) for r in rows])
+        self.usable = np.array([r[usable_column] == '1' for r in rows])
+        with fits.open(thru) as h:
+            ph = h[0].header
+            self.filters = [str(ph['FILT%d' % i]) for i in range(ph['NFILT'])]
+            self.res = float(ph['RES']) / 60.0; self.half = float(ph['EXTENT']) / 60.0
+            self.maps = np.stack([np.nan_to_num(h['THRU_' + f].data.astype(np.float32)) for f in self.filters])
+        self.n = self.maps.shape[1]; self._cache = {}
+
+    def grids(self, cap):
+        """(plan, done) arrays of shape (nfilter, ny, nx): effective exposures per cell."""
+        if cap in self._cache: return self._cache[cap]
+        (x0, x1), (d0, d1) = CAPS[cap]['x'], CAPS[cap]['dec']
+        nx, ny = int(round((x1 - x0) / CELL)), int(round((d1 - d0) / CELL))
+        plan = np.zeros((len(self.filters), ny, nx), np.float32); done = np.zeros_like(plan)
+        x = capx(self.ra, cap); R = self.half * np.sqrt(2)
+        sel = np.flatnonzero((is_ngc(self.ra) == (cap == 'NGC')) & (self.dec > d0 - R) & (self.dec < d1 + R))
+        for k in sel:
+            cd = np.cos(np.radians(self.dec[k])); hx = R / cd
+            i0, i1 = max(int((x[k] - hx - x0) / CELL), 0), min(int((x[k] + hx - x0) / CELL) + 1, nx)
+            j0, j1 = max(int((self.dec[k] - R - d0) / CELL), 0), min(int((self.dec[k] + R - d0) / CELL) + 1, ny)
+            if i1 <= i0 or j1 <= j0: continue
+            ra = np.radians(x0 + (np.arange(i0, i1) + 0.5) * CELL)[None, :]; de = np.radians(d0 + (np.arange(j0, j1) + 0.5) * CELL)[:, None]
+            ra0, de0 = np.radians(x[k]), np.radians(self.dec[k])
+            cosc = np.sin(de0) * np.sin(de) + np.cos(de0) * np.cos(de) * np.cos(ra - ra0)        # gnomonic projection about the shot
+            lx = np.degrees(np.cos(de) * np.sin(ra - ra0) / cosc)                                # east
+            ly = np.degrees((np.cos(de0) * np.sin(de) - np.sin(de0) * np.cos(de) * np.cos(ra - ra0)) / cosc)   # north
+            c, s = np.cos(self.rot[k]), np.sin(self.rot[k])
+            ix = np.floor((lx * c + ly * s + self.half) / self.res).astype(int); iy = np.floor((-lx * s + ly * c + self.half) / self.res).astype(int)
+            ok = (ix >= 0) & (ix < self.n) & (iy >= 0) & (iy < self.n)
+            v = np.where(ok[None], self.maps[:, np.clip(iy, 0, self.n - 1), np.clip(ix, 0, self.n - 1)], 0.0)
+            plan[:, j0:j1, i0:i1] += v
+            if self.usable[k]: done[:, j0:j1, i0:i1] += v
+        self._cache[cap] = (plan, done)
+        return plan, done
+
+
 def rect_x(ra_min, ra_max, cap):
     """x-range of an RA interval (which may wrap through 0) in the cap's coordinate."""
     a, b = float(capx(ra_min, cap)), float(capx(ra_max, cap))
@@ -70,6 +130,8 @@ def main():
     p.add_argument('--cfht-tiles', default=DEFAULT_CFHT)
     p.add_argument('--stripes', default=os.path.join(HERE, 'desi2-stripes.ecsv'))
     p.add_argument('--regions', default=os.path.join(HERE, 'footprint-regions.ecsv'))
+    p.add_argument('--niji-repo', default=DEFAULT_NIJI, help='clone of hsc-niji-survey/wide-observing-strategy (survey_status.csv and throughput maps)')
+    p.add_argument('--niji-loose', action='store_true', help='count HSC shots usable with the loose seeing limit (USABLE_LOOSE)')
     p.add_argument('-o', '--out', default=os.path.join(HERE, 'stripe-completeness.pdf'))
     a = p.parse_args()
 
@@ -84,6 +146,11 @@ def main():
         tiles['CFHT'] = t[(np.asarray(t['IN_IBIS']) == 1) & (np.asarray(t['IN_HSC']) == 0)]
     else:
         print('No CFHT tile file at %s: MB1/MB2 show DECam only' % a.cfht_tiles)
+    niji = None
+    if os.path.exists(os.path.join(a.niji_repo, 'survey_status.csv')):
+        niji = Niji(a.niji_repo, 'USABLE_LOOSE' if a.niji_loose else 'USABLE')
+    else:
+        print('No Niji survey_status.csv under %s: HSC not shown (use --niji-repo)' % a.niji_repo)
 
     def fraction(cam, filt, cap):
         t = tiles[cam]; m = (np.asarray(t['FILTER']) == filt) & (is_ngc(t['RA']) == (cap == 'NGC'))
@@ -97,7 +164,7 @@ def main():
     figw = 14.0; panelh = (figw - 1.2) * height / sum(widths)
     fig, axes = plt.subplots(len(BANDS), 2, figsize=(figw, len(BANDS) * (panelh + 0.42) + 1.0),
                              gridspec_kw=dict(width_ratios=widths, wspace=0.07, hspace=0.38))
-    for row, (band, fc, fd) in enumerate(BANDS):
+    for row, (band, fc, fd, fh) in enumerate(BANDS):
         primary = 'CFHT' if (fc and 'CFHT' in tiles) else 'DECam'
         ntile = []
         for col, cap in enumerate(CAPS):
@@ -107,11 +174,18 @@ def main():
                 frac = np.clip(frac + fraction('DECam', fd, cap)[1], 0, 1)
             else:
                 plan, frac = fraction('DECam', fd, cap)
-            for r in rg:                       # HSC-Niji+VST sky, under the map
+            ny, nx = plan.shape
+            xc = x0 + (np.arange(nx) + 0.5) * CELL; dc = d0 + (np.arange(ny) + 0.5) * CELL
+            plan = plan > 0
+            for r in rg:                       # HSC-Niji+VST sky: grey under the map, HSC-Niji on top where there is a status
                 if r['NAME'].startswith(cap):
                     xa, xb = rect_x(r['RA_MIN'], r['RA_MAX'], cap)
+                    if niji is not None and fh:
+                        hp, hd = niji.grids(cap); k = niji.filters.index(fh)
+                        inr = ((dc > r['DEC_MIN']) & (dc < r['DEC_MAX']))[:, None] & ((xc > xa) & (xc < xb))[None, :] & (hp[k] >= NIJI_MIN_PLAN)
+                        frac = np.where(inr, np.clip(hd[k] / np.maximum(hp[k], 1e-6), 0, 1), frac); plan = plan | inr
                     ax.add_patch(Rectangle((xa, r['DEC_MIN']), xb - xa, r['DEC_MAX'] - r['DEC_MIN'], fc=NIJI_GREY, ec='none', zorder=1))
-            im = ax.imshow(np.ma.masked_where(plan == 0, frac), origin='lower', extent=(x0, x1, d0, d1), cmap=CMAP, vmin=0, vmax=1,
+            im = ax.imshow(np.ma.masked_where(~plan, frac), origin='lower', extent=(x0, x1, d0, d1), cmap=CMAP, vmin=0, vmax=1,
                            aspect='auto', interpolation='nearest', zorder=2)
             for s in st:                       # stripe outlines and labels
                 if not s['STRIPE'].startswith(cap): continue
@@ -119,10 +193,8 @@ def main():
                 ax.add_patch(Rectangle((xa, s['DEC_CENTER'] - 1.4), xb - xa, 2.8, fc='none', ec=INK, lw=0.5, zorder=3))
                 ax.text(x1 - 1.0, s['DEC_CENTER'], s['STRIPE'], ha='left', va='center', fontsize=6.5, color=INK, zorder=4)
                 # mean of the map over the stripe's unique band (the part with program tiles)
-                ny, nx = plan.shape
-                xc = x0 + (np.arange(nx) + 0.5) * CELL; dc = d0 + (np.arange(ny) + 0.5) * CELL
-                inside = ((dc > s['DEC_CENTER'] - 1.4) & (dc < s['DEC_CENTER'] + 1.4))[:, None] & ((xc > xa) & (xc < xb))[None, :] & (plan > 0)
-                if inside.any() and s['POLU_IBIS'] == 1:     # no number for a stripe CFHT/DECam do not image
+                inside = ((dc > s['DEC_CENTER'] - 1.4) & (dc < s['DEC_CENTER'] + 1.4))[:, None] & ((xc > xa) & (xc < xb))[None, :] & plan
+                if inside.sum() * CELL ** 2 > 20 and (s['POLU_IBIS'] == 1 or (niji is not None and fh)):   # no number where nothing with a status is planned
                     ax.text(x0 + 1.0, s['DEC_CENTER'], '%.0f%%' % (100 * frac[inside].mean()), ha='right', va='center', fontsize=6.5, color=INK, zorder=4)
             ax.set_xlim(x1, x0); ax.set_ylim(d0, d1)          # RA increasing to the left
             ticks = np.arange(np.ceil(x0 / 20) * 20, x1, 20)
@@ -136,6 +208,11 @@ def main():
             if f and cam in tiles:
                 t = tiles[cam]; m = np.asarray(t['FILTER']) == f; d = int((np.asarray(t['DONE'])[m] > 0).sum())
                 parts.append('%s %s: %d of %d tiles (%.1f%%)' % (cam, f, d, m.sum(), 100.0 * d / m.sum()))
+        if niji is not None and fh:
+            axes[row, 1].set_title('HSC-Niji MBQ1-%s: %d of %d shots (%.1f%%)' % (fh, niji.usable.sum(), len(niji.usable), 100.0 * niji.usable.mean()),
+                                   loc='left', fontsize=10, color='black')
+        elif niji is not None:
+            axes[row, 1].set_title('VST: no status yet', loc='left', fontsize=10, color='black')
         axes[row, 0].set_title(band + '    ' + ';   '.join(parts), loc='left', fontsize=10, color='black')
     axes[0, 0].text(1.0, 1.04, 'NGC', transform=axes[0, 0].transAxes, ha='right', va='bottom', fontsize=10, color=INK)
     axes[0, 1].text(1.0, 1.04, 'SGC', transform=axes[0, 1].transAxes, ha='right', va='bottom', fontsize=10, color=INK)
@@ -143,8 +220,8 @@ def main():
     cax = fig.add_axes([0.30, 0.045, 0.34, 0.012])
     cb = fig.colorbar(im, cax=cax, orientation='horizontal'); cb.outline.set_linewidth(0.4); cb.ax.tick_params(labelsize=8)
     cb.set_label('fraction of planned exposures completed at each point', fontsize=9)
-    fig.legend(handles=[Patch(fc=NIJI_GREY, ec='none', label='HSC-Niji + VST sky (no status yet)'), Patch(fc='none', ec=INK, lw=0.5, label='stripe (unique 2.8-deg band)')],
-               loc='lower right', bbox_to_anchor=(0.985, 0.028), frameon=False, fontsize=8.5, ncol=1)
+    fig.legend(handles=[Patch(fc=NIJI_GREY, ec='none', label='HSC-Niji + VST sky with no status yet'), Patch(fc='none', ec=INK, lw=0.5, label='stripe (unique 2.8-deg band)')],
+               loc='lower right', bbox_to_anchor=(0.985, 0.015), frameon=False, fontsize=8.5, ncol=1)
     fig.suptitle('DESI Run 2 medium-band imaging: completeness by stripe', x=0.05, y=0.985, ha='left', fontsize=12)
     fig.savefig(a.out); print('wrote', a.out)
     if a.out.endswith('.pdf'):
