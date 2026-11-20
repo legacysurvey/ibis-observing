@@ -11,8 +11,11 @@ through the MBQ1 quadrant filter, so each of the four filters (413, 439, 465, 49
 sees about a quarter of the focal plane.  The map is (throughput-weighted usable
 shots) / (throughput-weighted planned shots) in that filter, from the survey
 status table and the per-filter throughput maps of the Niji
-wide-observing-strategy repository (--niji-repo).  MB5 there will come from VST,
-which has no status yet, and is drawn in grey.
+wide-observing-strategy repository (--niji-repo).  Shots count as usable to the
+loose seeing limit of 2.0 arcsec (USABLE_LOOSE) unless --niji-strict asks for the
+1.3 arcsec limit (USABLE).  MB5 there will come from VST, which has no status yet,
+so that area is left empty in the MB5 row.  The HSC-Niji+VST area is outlined in
+every row.
 
 Program tiles are those with IN_IBIS=1 and IN_HSC=0 (DECam: wide tiles only),
 as in stripe_completeness.py.  The stripes are outlined by their unique
@@ -27,6 +30,7 @@ import matplotlib; matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.patches import Rectangle, Patch
+from matplotlib.lines import Line2D
 from astropy.table import Table
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -40,7 +44,7 @@ BANDS = [('MB1', 'M4112', 'M411', '413'), ('MB2', 'M4376', 'M438', '439'), ('MB3
 DEFAULT_NIJI = os.path.join(os.path.expanduser('~'), 'Imaging', 'wide-observing-strategy')
 NIJI_MIN_PLAN = 0.5                  # effective planned exposures below which a cell is not drawn for HSC
 CMAP = LinearSegmentedColormap.from_list('completeness', ['#dfe9f5', '#9dbfe3', '#4f8fcf', '#1f5fae', '#0b2f6b'])
-NIJI_GREY = '#d9d9d9'; INK = '#333333'
+NIJI_LINE = '#d9730d'; INK = '#333333'
 
 
 def capx(ra, cap):
@@ -131,7 +135,7 @@ def main():
     p.add_argument('--stripes', default=os.path.join(HERE, 'desi2-stripes.ecsv'))
     p.add_argument('--regions', default=os.path.join(HERE, 'footprint-regions.ecsv'))
     p.add_argument('--niji-repo', default=DEFAULT_NIJI, help='clone of hsc-niji-survey/wide-observing-strategy (survey_status.csv and throughput maps)')
-    p.add_argument('--niji-loose', action='store_true', help='count HSC shots usable with the loose seeing limit (USABLE_LOOSE)')
+    p.add_argument('--niji-strict', action='store_true', help='count only HSC shots with seeing <= 1.3 arcsec (USABLE); default is the loose 2.0 arcsec limit (USABLE_LOOSE)')
     p.add_argument('-o', '--out', default=os.path.join(HERE, 'stripe-completeness.pdf'))
     a = p.parse_args()
 
@@ -148,7 +152,7 @@ def main():
         print('No CFHT tile file at %s: MB1/MB2 show DECam only' % a.cfht_tiles)
     niji = None
     if os.path.exists(os.path.join(a.niji_repo, 'survey_status.csv')):
-        niji = Niji(a.niji_repo, 'USABLE_LOOSE' if a.niji_loose else 'USABLE')
+        niji = Niji(a.niji_repo, 'USABLE' if a.niji_strict else 'USABLE_LOOSE')
     else:
         print('No Niji survey_status.csv under %s: HSC not shown (use --niji-repo)' % a.niji_repo)
 
@@ -177,16 +181,19 @@ def main():
             ny, nx = plan.shape
             xc = x0 + (np.arange(nx) + 0.5) * CELL; dc = d0 + (np.arange(ny) + 0.5) * CELL
             plan = plan > 0
-            for r in rg:                       # HSC-Niji+VST sky: grey under the map, HSC-Niji on top where there is a status
+            nijimask = np.zeros(plan.shape, bool)
+            for r in rg:                       # HSC-Niji+VST sky: HSC-Niji where there is a status, and an outline in every row
                 if r['NAME'].startswith(cap):
                     xa, xb = rect_x(r['RA_MIN'], r['RA_MAX'], cap)
+                    nijimask |= ((dc > r['DEC_MIN']) & (dc < r['DEC_MAX']))[:, None] & ((xc > xa) & (xc < xb))[None, :]
                     if niji is not None and fh:
                         hp, hd = niji.grids(cap); k = niji.filters.index(fh)
                         inr = ((dc > r['DEC_MIN']) & (dc < r['DEC_MAX']))[:, None] & ((xc > xa) & (xc < xb))[None, :] & (hp[k] >= NIJI_MIN_PLAN)
                         frac = np.where(inr, np.clip(hd[k] / np.maximum(hp[k], 1e-6), 0, 1), frac); plan = plan | inr
-                    ax.add_patch(Rectangle((xa, r['DEC_MIN']), xb - xa, r['DEC_MAX'] - r['DEC_MIN'], fc=NIJI_GREY, ec='none', zorder=1))
             im = ax.imshow(np.ma.masked_where(~plan, frac), origin='lower', extent=(x0, x1, d0, d1), cmap=CMAP, vmin=0, vmax=1,
                            aspect='auto', interpolation='nearest', zorder=2)
+            if nijimask.any():
+                ax.contour(xc, dc, nijimask.astype(float), levels=[0.5], colors=[NIJI_LINE], linewidths=1.1, zorder=5)
             for s in st:                       # stripe outlines and labels
                 if not s['STRIPE'].startswith(cap): continue
                 xa, xb = rect_x(s['RA_MIN'], s['RA_MAX'], cap)
@@ -209,7 +216,7 @@ def main():
                 t = tiles[cam]; m = np.asarray(t['FILTER']) == f; d = int((np.asarray(t['DONE'])[m] > 0).sum())
                 parts.append('%s %s: %d of %d tiles (%.1f%%)' % (cam, f, d, m.sum(), 100.0 * d / m.sum()))
         if niji is not None and fh:
-            axes[row, 1].set_title('HSC-Niji MBQ1-%s: %d of %d shots (%.1f%%)' % (fh, niji.usable.sum(), len(niji.usable), 100.0 * niji.usable.mean()),
+            axes[row, 1].set_title('HSC-Niji MBQ1-%s: %d of %d shots (%.1f%%), seeing <= %s arcsec' % (fh, niji.usable.sum(), len(niji.usable), 100.0 * niji.usable.mean(), '1.3' if a.niji_strict else '2.0'),
                                    loc='left', fontsize=10, color='black')
         elif niji is not None:
             axes[row, 1].set_title('VST: no status yet', loc='left', fontsize=10, color='black')
@@ -220,7 +227,7 @@ def main():
     cax = fig.add_axes([0.30, 0.045, 0.34, 0.012])
     cb = fig.colorbar(im, cax=cax, orientation='horizontal'); cb.outline.set_linewidth(0.4); cb.ax.tick_params(labelsize=8)
     cb.set_label('fraction of planned exposures completed at each point', fontsize=9)
-    fig.legend(handles=[Patch(fc=NIJI_GREY, ec='none', label='HSC-Niji + VST sky with no status yet'), Patch(fc='none', ec=INK, lw=0.5, label='stripe (unique 2.8-deg band)')],
+    fig.legend(handles=[Line2D([], [], color=NIJI_LINE, lw=1.1, label='HSC-Niji + VST area (MB5 from VST: no status yet)'), Patch(fc='none', ec=INK, lw=0.5, label='stripe (unique 2.8-deg band)')],
                loc='lower right', bbox_to_anchor=(0.985, 0.015), frameon=False, fontsize=8.5, ncol=1)
     fig.suptitle('DESI Run 2 medium-band imaging: completeness by stripe', x=0.05, y=0.985, ha='left', fontsize=12)
     fig.savefig(a.out); print('wrote', a.out)

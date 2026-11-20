@@ -7,8 +7,8 @@ tiles marked DONE in the tile files over the number of program tiles.
   DECam (IBIS): ibis-tiles.ecsv, wide tiles (OBJECT IBIS_wide_*) with IN_IBIS=1, IN_HSC=0
   CFHT  (POLU): cfht-tiles.ecsv, tiles with IN_IBIS=1, IN_HSC=0
   HSC   (Niji): survey_status.csv of the Niji wide-observing-strategy repository
-                (--niji-repo): one row per shot, done = USABLE (or USABLE_LOOSE with
-                --niji-loose).  Each shot is one exposure through the MBQ1 quadrant
+                (--niji-repo): one row per shot, done = USABLE_LOOSE (seeing <= 2.0
+                arcsec; USABLE, seeing <= 1.3 arcsec, with --niji-strict).  Each shot is one exposure through the MBQ1 quadrant
                 filter, i.e. about a quarter of the field in each of 413/439/465/490,
                 so one column serves the four filters.  Only shots centred within
                 0.75 deg of an HSC-Niji+VST rectangle of footprint-regions.ecsv count.
@@ -74,7 +74,7 @@ def main():
     p.add_argument('--ibis-tiles', default=os.path.join(HERE, 'ibis-tiles.ecsv'))
     p.add_argument('--cfht-tiles', default=DEFAULT_CFHT)
     p.add_argument('--niji-repo', default=DEFAULT_NIJI, help='clone of hsc-niji-survey/wide-observing-strategy')
-    p.add_argument('--niji-loose', action='store_true', help='count HSC shots usable with the loose seeing limit')
+    p.add_argument('--niji-strict', action='store_true', help='count only HSC shots with seeing <= 1.3 arcsec (default: the loose 2.0 arcsec limit)')
     p.add_argument('--hsc-tiles', help='HSC-Niji tiling table (ra, dec[, done])')
     p.add_argument('--vst-tiles', help='VST tiling table (ra, dec[, done])')
     p.add_argument('--stripes', default=os.path.join(HERE, 'desi2-stripes.ecsv'))
@@ -109,7 +109,7 @@ def main():
     if os.path.exists(status) and not a.hsc_tiles:
         rows = list(csv.DictReader(open(status)))
         ra = np.array([float(r['RA']) for r in rows]); dec = np.array([float(r['DEC']) for r in rows])
-        done = np.array([r['USABLE_LOOSE' if a.niji_loose else 'USABLE'] == '1' for r in rows])
+        done = np.array([r['USABLE' if a.niji_strict else 'USABLE_LOOSE'] == '1' for r in rows])
         near = np.zeros(len(ra), bool)
         for r in rg[rg['KIND'] == 'niji']:
             pad = 0.75 / np.cos(np.radians(dec)); w = (r['RA_MAX'] - r['RA_MIN']) % 360
