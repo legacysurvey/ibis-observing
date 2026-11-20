@@ -15,7 +15,9 @@ wide-observing-strategy repository (--niji-repo).  Shots count as usable to the
 loose seeing limit of 2.0 arcsec (USABLE_LOOSE) unless --niji-strict asks for the
 1.3 arcsec limit (USABLE).  MB5 there will come from VST, which has no status yet,
 so that area is left empty in the MB5 row.  The HSC-Niji+VST area is outlined in
-every row.
+every row; inside it only HSC (and, later, VST) coverage is shown, never the
+CFHT or DECam tiles that overlap its edge.  Parts of a stripe that nobody images
+(the dropped slivers of footprint-regions.ecsv and the ends of SGC-1) are hatched.
 
 Program tiles are those with IN_IBIS=1 and IN_HSC=0 (DECam: wide tiles only),
 as in stripe_completeness.py.  The stripes are outlined by their unique
@@ -26,7 +28,7 @@ each stripe is the mean of the map over that band (where there are program tiles
 """
 import argparse, csv, os
 import numpy as np
-import matplotlib; matplotlib.use('Agg')
+import matplotlib; matplotlib.use('Agg'); matplotlib.rcParams['hatch.color'] = '#777777'; matplotlib.rcParams['hatch.linewidth'] = 0.4
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.patches import Rectangle, Patch
@@ -140,7 +142,7 @@ def main():
     a = p.parse_args()
 
     st = Table.read(a.stripes)
-    rg = Table.read(a.regions); rg = rg[rg['KIND'] == 'niji']
+    rgall = Table.read(a.regions); rg = rgall[rgall['KIND'] == 'niji']; dropped = rgall[rgall['KIND'] == 'dropped']
     tiles = {}
     t = Table.read(a.ibis_tiles)
     sel = np.array([o.startswith('IBIS_wide') for o in t['OBJECT']]) & (np.asarray(t['IN_IBIS']) == 1) & (np.asarray(t['IN_HSC']) == 0)
@@ -181,17 +183,32 @@ def main():
             ny, nx = plan.shape
             xc = x0 + (np.arange(nx) + 0.5) * CELL; dc = d0 + (np.arange(ny) + 0.5) * CELL
             plan = plan > 0
-            nijimask = np.zeros(plan.shape, bool)
-            for r in rg:                       # HSC-Niji+VST sky: HSC-Niji where there is a status, and an outline in every row
+            def cells(xa, xb, da, db):
+                return ((dc > da) & (dc < db))[:, None] & ((xc > xa) & (xc < xb))[None, :]
+            # the stripes' unique bands, the HSC-Niji+VST area within them, and the parts of the stripes nobody images
+            stripes = np.zeros(plan.shape, bool); nijimask = np.zeros(plan.shape, bool); noimg = np.zeros(plan.shape, bool)
+            for s in st:
+                if s['STRIPE'].startswith(cap):
+                    sband = cells(*rect_x(s['RA_MIN'], s['RA_MAX'], cap), s['DEC_CENTER'] - 1.4, s['DEC_CENTER'] + 1.4)
+                    stripes |= sband
+                    if s['POLU_IBIS'] != 1: noimg |= sband          # e.g. the ends of SGC-1 (its HSC part is removed below)
+            for r in dropped:
+                if r['NAME'].startswith(cap): noimg |= cells(*rect_x(r['RA_MIN'], r['RA_MAX'], cap), r['DEC_MIN'], r['DEC_MAX']) & stripes
+            for r in rg:
+                if r['NAME'].startswith(cap): nijimask |= cells(*rect_x(r['RA_MIN'], r['RA_MAX'], cap), r['DEC_MIN'], r['DEC_MAX'])
+            nijimask &= stripes; noimg &= ~nijimask
+            plan &= ~nijimask                  # inside the HSC-Niji+VST area only HSC (and, one day, VST) is shown
+            for r in rg:
                 if r['NAME'].startswith(cap):
                     xa, xb = rect_x(r['RA_MIN'], r['RA_MAX'], cap)
-                    nijimask |= ((dc > r['DEC_MIN']) & (dc < r['DEC_MAX']))[:, None] & ((xc > xa) & (xc < xb))[None, :]
                     if niji is not None and fh:
                         hp, hd = niji.grids(cap); k = niji.filters.index(fh)
-                        inr = ((dc > r['DEC_MIN']) & (dc < r['DEC_MAX']))[:, None] & ((xc > xa) & (xc < xb))[None, :] & (hp[k] >= NIJI_MIN_PLAN)
+                        inr = cells(xa, xb, r['DEC_MIN'], r['DEC_MAX']) & nijimask & (hp[k] >= NIJI_MIN_PLAN)
                         frac = np.where(inr, np.clip(hd[k] / np.maximum(hp[k], 1e-6), 0, 1), frac); plan = plan | inr
             im = ax.imshow(np.ma.masked_where(~plan, frac), origin='lower', extent=(x0, x1, d0, d1), cmap=CMAP, vmin=0, vmax=1,
                            aspect='auto', interpolation='nearest', zorder=2)
+            if noimg.any():
+                ax.contourf(xc, dc, noimg.astype(float), levels=[0.5, 1.5], colors='none', hatches=['//////'], zorder=2.5)
             if nijimask.any():
                 ax.contour(xc, dc, nijimask.astype(float), levels=[0.5], colors=[NIJI_LINE], linewidths=1.1, zorder=5)
             for s in st:                       # stripe outlines and labels
@@ -227,8 +244,9 @@ def main():
     cax = fig.add_axes([0.30, 0.045, 0.34, 0.012])
     cb = fig.colorbar(im, cax=cax, orientation='horizontal'); cb.outline.set_linewidth(0.4); cb.ax.tick_params(labelsize=8)
     cb.set_label('fraction of planned exposures completed at each point', fontsize=9)
-    fig.legend(handles=[Line2D([], [], color=NIJI_LINE, lw=1.1, label='HSC-Niji + VST area (MB5 from VST: no status yet)'), Patch(fc='none', ec=INK, lw=0.5, label='stripe (unique 2.8-deg band)')],
-               loc='lower right', bbox_to_anchor=(0.985, 0.015), frameon=False, fontsize=8.5, ncol=1)
+    fig.legend(handles=[Line2D([], [], color=NIJI_LINE, lw=1.1, label='HSC-Niji + VST area (MB5 from VST: no status yet)'), Patch(fc='none', ec=INK, lw=0.5, label='stripe (unique 2.8-deg band)'),
+                        Patch(fc='none', ec='#777777', lw=0.0, hatch='//////', label='part of a stripe that is not imaged')],
+               loc='lower right', bbox_to_anchor=(0.985, 0.005), frameon=False, fontsize=8.5, ncol=1)
     fig.suptitle('DESI Run 2 medium-band imaging: completeness by stripe', x=0.05, y=0.985, ha='left', fontsize=12)
     fig.savefig(a.out); print('wrote', a.out)
     if a.out.endswith('.pdf'):
