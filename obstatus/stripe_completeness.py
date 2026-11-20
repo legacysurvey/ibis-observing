@@ -15,12 +15,12 @@ tiles marked DONE in the tile files over the number of program tiles.
                 VST (the fifth band there) can be added with --vst-tiles once a
                 table with ra, dec and done exists.
 
-Each tile is assigned to exactly one stripe: the stripe in its Galactic cap
-(NGC: 90 < RA < 270) whose central declination is nearest to the tile centre,
-among the stripes that camera images (POLU_IBIS=1 in desi2-stripes.ecsv for
-CFHT and DECam; the stripes with an HSC-Niji+VST rectangle in
-footprint-regions.ecsv for HSC and VST).  Tiles that spill over a stripe edge
-are therefore counted once, in the stripe holding their centre.
+Each tile is assigned to exactly one stripe.  A CFHT or DECam tile goes to the
+stripe whose CFHT+DECam sky (within the stripe's unique 2.8-deg band) its field
+overlaps, or failing that is nearest; if two qualify, to the one nearer in
+declination.  An edge tile of NGC-7 whose centre lies in the band of NGC-6 (all
+HSC-Niji+VST) is therefore counted in NGC-7, and NGC-6 has no CFHT or DECam tiles.
+HSC shots go to the nearest stripe that has an HSC-Niji+VST rectangle.
 
   python stripe_completeness.py
   python stripe_completeness.py --cfht-tiles ~/cfht-observing/obstatus/cfht-tiles.ecsv --markdown
@@ -30,6 +30,8 @@ import numpy as np
 from astropy.table import Table
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from footprint import Footprint, plan_rectangles, MEGACAM_OUTER, DECAM_OUTER
 DEFAULT_NIJI = os.path.join(os.path.expanduser('~'), 'Imaging', 'wide-observing-strategy')
 DEFAULT_CFHT = os.path.join(HERE, '..', '..', 'cfht-observing', 'obstatus', 'cfht-tiles.ecsv')
 
@@ -49,6 +51,32 @@ def assign_stripes(ra, dec, names, centers):
         s = ngc_stripe == cap; t = ngc_tile == cap
         if s.any() and t.any():
             out[t] = names[s][np.argmin(np.abs(dec[t][:, None] - centers[s][None, :]), axis=1)]
+    return out
+
+
+def assign_by_overlap(ra, dec, st, half, root):
+    """Stripe whose CFHT+DECam sky, within its unique 2.8-deg band, is nearest the field.
+
+    Fields (half-sizes ``half``) overlapping the CFHT+DECam sky of a stripe's unique band go to
+    that stripe (nearest in Dec if two); the remaining edge tiles go to the first stripe reached
+    as the field is grown in steps of 0.25 deg.
+    """
+    from pathlib import Path
+    _, excluded, _ = plan_rectangles(Path(root))
+    ra = np.asarray(ra, float); dec = np.asarray(dec, float)
+    polu = st[np.asarray(st['POLU_IBIS']) == 1]
+    fps = [Footprint([(float(s['RA_MIN']), float(s['RA_MAX']), float(s['DEC_CENTER']) - 1.4, float(s['DEC_CENTER']) + 1.4)], excluded, [])
+           for s in polu]
+    out = assign_stripes(ra, dec, polu['STRIPE'], polu['DEC_CENTER']); todo = np.ones(len(ra), bool)
+    for grow in (0.0, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0):
+        if not todo.any(): break
+        idx = np.flatnonzero(todo); best = np.full(len(idx), np.inf); name = out[idx].copy()
+        for s, fp in zip(polu, fps):
+            hit = fp.near_polu(ra[idx], dec[idx], (half[0] + grow, half[1] + grow)); d = np.abs(dec[idx] - float(s['DEC_CENTER']))
+            take = hit & (d < best)
+            name[take] = s['STRIPE']; best[take] = d[take]
+        got = np.isfinite(best)
+        out[idx[got]] = name[got]; todo[idx[got]] = False
     return out
 
 
@@ -92,7 +120,7 @@ def main():
     if os.path.exists(a.cfht_tiles):
         t = Table.read(a.cfht_tiles)
         prog = (np.asarray(t['IN_IBIS']) == 1) & (np.asarray(t['IN_HSC']) == 0)
-        stripe = assign_stripes(t['RA'], t['DEC'], polu['STRIPE'], polu['DEC_CENTER'])
+        stripe = assign_by_overlap(t['RA'], t['DEC'], st, MEGACAM_OUTER, os.path.dirname(a.stripes))
         done = np.asarray(t['DONE']) > 0
         for f in sorted(set(t['FILTER'])):
             cols.append(('CFHT ' + f, count(stripe, done, prog & (np.asarray(t['FILTER']) == f)), True))
@@ -101,7 +129,7 @@ def main():
     t = Table.read(a.ibis_tiles)
     wide = np.array([o.startswith('IBIS_wide') for o in t['OBJECT']])
     prog = wide & (np.asarray(t['IN_IBIS']) == 1) & (np.asarray(t['IN_HSC']) == 0)
-    stripe = assign_stripes(t['RA'], t['DEC'], polu['STRIPE'], polu['DEC_CENTER'])
+    stripe = assign_by_overlap(t['RA'], t['DEC'], st, DECAM_OUTER, os.path.dirname(a.stripes))
     done = np.asarray(t['DONE']) > 0
     for f in sorted(set(t['FILTER'])):
         cols.append(('DECam ' + f, count(stripe, done, prog & (np.asarray(t['FILTER']) == f)), True))

@@ -2,7 +2,7 @@
 
 The plan (desi_run2_imaging_plan/sample631.tex) defines declination stripes
 (obstatus/desi2-stripes.ecsv) and, inside some of them, HSC-Niji+VST
-rectangles plus two dropped slivers (obstatus/footprint-regions.ecsv).
+rectangles (obstatus/footprint-regions.ecsv; any region of KIND 'dropped' is removed too).
 POLU+IBIS sky is the union of the stripes with POLU_IBIS=1 minus those
 regions. Stripes with POLU_IBIS=0 (SGC-1) contribute nothing; NGC-9 and SGC-9,
 formerly proposed extensions, are baseline POLU+IBIS stripes since 2026-11-19.

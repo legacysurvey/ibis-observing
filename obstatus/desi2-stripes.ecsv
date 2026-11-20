@@ -22,6 +22,7 @@
 # - {SURVEYS_NOTE: 'The printed Surveys entries are split into YEAR, SURVEYS, and parenthetical NOTE.'}
 # - {RA_NOTE: 'SGC RA_MIN > RA_MAX denotes a range crossing 360/0 degrees.'}
 # - {AREA_NOTE: 'Declination ranges overlap adjacent stripes; areas are for a unique declination width of 2.8 degrees.'}
+# - {NGC56_NOTE: 'NGC-5 and NGC-6 are trimmed to the HSC-SSP Wide imaging at their short ends (2026-11-20): NGC-5 starts at RA 128.0 (the plan first had 126.60) and NGC-6 ends at RA 226.0 (first 228.30). The two slivers so removed, 10 sq deg, were imaged by nobody.'}
 # - {NGC9_NOTE: 'NGC-9 and SGC-9, formerly proposed extensions, are part of the baseline footprint as of 2026-11-19 (delivered last, Y5).'}
 # - {SGC1_NOTE: 'SGC-1 is a bonus region imaged only by HSC-Niji+VST, mostly outside the Rubin footprint. Its RA range (330.2 to 39.7) and area are those of the HSC-SSP Wide imaging; the plan originally tabulated RA 315.57 to 44.37 (248 sq deg), whose ends are not imaged by anyone (2026-11-20).'}
 # schema: astropy-2.0
@@ -30,8 +31,8 @@ NGC-1 13.28 121.01 255.71 11.375 15.125 367 Y4 POLU+IBIS "" 1
 NGC-2 10.48 122.33 254.40 8.875 12.375 364 Y3 POLU+IBIS "" 1
 NGC-3 7.68 123.69 253.00 5.875 9.375 359 Y2 POLU+IBIS "" 1
 NGC-4 4.88 125.11 251.52 3.125 6.625 353 Y2 POLU+IBIS "" 1
-NGC-5 2.08 126.60 249.93 0.375 3.875 345 Y4 Niji+VST "" 1
-NGC-6 -0.72 128.16 228.30 -2.375 1.125 280 Y3 Niji+VST "" 1
+NGC-5 2.08 128.00 249.93 0.375 3.875 341 Y4 Niji+VST "" 1
+NGC-6 -0.72 128.16 226.00 -2.375 1.125 274 Y3 Niji+VST "" 1
 NGC-7 -3.52 129.81 225.58 -5.375 -1.625 268 Y1 POLU+IBIS "" 1
 NGC-8 -6.32 131.56 222.41 -8.125 -4.625 253 Y1 POLU+IBIS "" 1
 NGC-9 -9.12 133.43 218.59 -10.875 -7.375 235 Y5 POLU+IBIS "" 1

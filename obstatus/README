@@ -44,3 +44,9 @@ Resetting git to the repository version:
 ; tiles centred in the SGC-1 band at RA < 330.2 or > 39.7 that are program
 ; tiles (66 per filter, DEC < 3.3) are edge tiles of SGC-2, whose padded
 ; bounds reach DEC +2.375.
+; Also 2026-11-20: NGC-5 and NGC-6 are trimmed to the HSC-SSP Wide imaging at
+; their short ends (NGC-5 from RA 128.0, NGC-6 to RA 226.0), and the two
+; "dropped" slivers are gone from footprint-regions.ecsv.  Rerunning
+; update_footprint_flags.py made 4 more wide tiles per filter program tiles:
+; they cover the padded edges of NGC-4 and of the DECam end of NGC-5, which the
+; dropped rectangles used to erase.

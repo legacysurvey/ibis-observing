@@ -17,7 +17,7 @@ loose seeing limit of 2.0 arcsec (USABLE_LOOSE) unless --niji-strict asks for th
 so that area is left empty in the MB5 row.  The HSC-Niji+VST area is outlined in
 every row; inside it only HSC (and, later, VST) coverage is shown, never the
 CFHT or DECam tiles that overlap its edge.  Parts of a stripe that nobody images
-(the dropped slivers of footprint-regions.ecsv and the ends of SGC-1) are hatched.
+(none since 2026-11-20, when the stripe table was trimmed to the imaged sky) would be hatched.
 
 Program tiles are those with IN_IBIS=1 and IN_HSC=0 (DECam: wide tiles only),
 as in stripe_completeness.py.  The stripes are outlined by their unique
@@ -170,6 +170,7 @@ def main():
     figw = 14.0; panelh = (figw - 1.2) * height / sum(widths)
     fig, axes = plt.subplots(len(BANDS), 2, figsize=(figw, len(BANDS) * (panelh + 0.42) + 1.0),
                              gridspec_kw=dict(width_ratios=widths, wspace=0.07, hspace=0.38))
+    any_noimg = False
     for row, (band, fc, fd, fh) in enumerate(BANDS):
         primary = 'CFHT' if (fc and 'CFHT' in tiles) else 'DECam'
         ntile = []
@@ -208,6 +209,7 @@ def main():
             im = ax.imshow(np.ma.masked_where(~plan, frac), origin='lower', extent=(x0, x1, d0, d1), cmap=CMAP, vmin=0, vmax=1,
                            aspect='auto', interpolation='nearest', zorder=2)
             if noimg.any():
+                any_noimg = True
                 ax.contourf(xc, dc, noimg.astype(float), levels=[0.5, 1.5], colors='none', hatches=['//////'], zorder=2.5)
             if nijimask.any():
                 ax.contour(xc, dc, nijimask.astype(float), levels=[0.5], colors=[NIJI_LINE], linewidths=1.1, zorder=5)
@@ -244,8 +246,10 @@ def main():
     cax = fig.add_axes([0.30, 0.045, 0.34, 0.012])
     cb = fig.colorbar(im, cax=cax, orientation='horizontal'); cb.outline.set_linewidth(0.4); cb.ax.tick_params(labelsize=8)
     cb.set_label('fraction of planned exposures completed at each point', fontsize=9)
-    fig.legend(handles=[Line2D([], [], color=NIJI_LINE, lw=1.1, label='HSC-Niji + VST area (MB5 from VST: no status yet)'), Patch(fc='none', ec=INK, lw=0.5, label='stripe (unique 2.8-deg band)'),
-                        Patch(fc='none', ec='#777777', lw=0.0, hatch='//////', label='part of a stripe that is not imaged')],
+    handles = [Line2D([], [], color=NIJI_LINE, lw=1.1, label='HSC-Niji + VST area (MB5 from VST: no status yet)'), Patch(fc='none', ec=INK, lw=0.5, label='stripe (unique 2.8-deg band)')]
+    if any_noimg:
+        handles.append(Patch(fc='none', ec='#777777', lw=0.0, hatch='//////', label='part of a stripe that is not imaged'))
+    fig.legend(handles=handles,
                loc='lower right', bbox_to_anchor=(0.985, 0.005), frameon=False, fontsize=8.5, ncol=1)
     fig.suptitle('DESI Run 2 medium-band imaging: completeness by stripe', x=0.05, y=0.985, ha='left', fontsize=12)
     fig.savefig(a.out); print('wrote', a.out)
